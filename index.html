@@ -188,7 +188,7 @@
                         <img src="img/recipes/ccc.png"  class="img-responsive" alt="">
                     </a>
                     <div class="recipes-caption">
-                        <h4>Chocolate (x2) Chip Cookies</h4>
+                        <h4>Cookies</h4>
                         <p class="text-muted">Graphic Design</p>
                     </div>
                 </div>
@@ -230,7 +230,7 @@
                         <img src="img/recipes/polarbears.png" class="img-responsive" alt="">
                     </a>
                     <div class="recipes-caption">
-                        <h4>Polar Bear Cupcakes</h4>
+                        <h4>Cupcakes</h4>
                         <p class="text-muted">Website Design</p>
                     </div>
                 </div>
@@ -258,7 +258,7 @@
                         <img src="img/recipes/brownies.png" class="img-responsive" alt="">
                     </a>
                     <div class="recipes-caption">
-                        <h4>Caramel Brownies</h4>
+                        <h4>Brownies</h4>
                         <p class="text-muted">Website Design</p>
                     </div>
                 </div>
@@ -681,6 +681,7 @@
             </div>
         </div>
  
+ <iframe src="https://www.google.com/calendar/embed?height=400&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=so35i067bolghi8im93sbn1ade8g9tsh%40import.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FChicago" style=" border-width:0 " width="800px" height="450" frameborder="0" scrolling="no"></iframe>
      <!-- Message -->
     <section id="goodies" class="bg-light-gray">
         <div class="container">
@@ -694,65 +695,81 @@
         </section>
 
 
-   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  <script type="text/javascript">
-    google.load('visualization', '1.1', {packages: ['map']});
-    google.setOnLoadCallback(drawMap);
-
-    function drawMap () {
-      var data = new google.visualization.DataTable();
-       data.addColumn('string', 'Address');
-      data.addColumn('string', 'Location');
-      data.addColumn('string', 'Marker')
-
-      data.addRows([
-        ['3450 El Camino Real, Palo Alto, CA 94306', 'Driftwood Deli','past'],
-        ['2600 El Camino Real Ste 220, Palo Alto, CA 94306','Fambrini Terrace Cafe','green'], ['3864 El Camino Real, Palo Alto, CA 94306','Ace of Sandwiches','past'],
-        ['121 Lytton Ave, Palo Alto, CA 94301','Gelataio','past'],
-        ['1276 Harriet St, Palo Alto, CA 94301','Children\'s Library','past'],
-        ['Pavlina Plaza Shopping Center, 572 E El Camino Real, Sunnyvale, CA 94087','BonChon Chicken','past'] ,
-          ['801 Woodside Rd, Ste 16 Redwood City, CA 94061','Chuck\'s Donuts', 'green'],['2706 Middlefield Rd, Palo Alto, CA 94306','Palo Alto Breakfast House','past'],
-          ['405 S California Ave, Palo Alto, CA 94306', 'Joanie\'s Café','past'],
-          ['700 Welch Rd, Palo Alto, CA 94304','Tootsies At the Stanford Barn','past'],
-          ['538 Ramona St, Palo Alto, CA 94301','Coupa Café','past']
-      ]);
-
-      var options = {
-        mapType: 'styledMap',
-        zoomLevel: 12,
-        showTip: true,
-        useMapTypeControl: true,
-        maps: {
-          // Your custom mapTypeId holding custom map styles.
-          styledMap: {
-            name: 'Styled Map', // This name will be displayed in the map type control.
-            styles: [
-              {featureType: 'poi.attraction',
-               stylers: [{color: '#fce8b2'}]
-              },
-              {featureType: 'road.highway',
-               stylers: [{hue: '#0277bd'}, {saturation: -50}]
-              },
-              {featureType: 'road.highway',
-               elementType: 'labels.icon',
-               stylers: [{hue: '#000'}, {saturation: 100}, {lightness: 50}]
-              },
-              {featureType: 'landscape',
-               stylers: [{hue: '#259b24'}, {saturation: 10}, {lightness: -22}]
-              }
-        ]}}
-      };
-
-      var map = new google.visualization.Map(document.getElementById('map_div'));
-
-      map.draw(data, options);
+ <head>
+    <style>
+    .chartWithOverlay {
+           position: relative;
+           width: 100%;
     }
-  </script>
- <body>
-<div id="map_div" style="height: 500px; width: 100%"></div>
-</body>
+    .overlay {
+           position: absolute;
+           top: 20px;   /* chartArea top  */
+           left: 40%; /* chartArea left */
+    }
+   </style>
 
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["map"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Lat', 'Long', 'Name','Marker'],
+          [37.419110, -122.135093, 'Driftwood Deli: <b><a href="http://www.yelp.com/biz/driftwood-deli-and-market-palo-alto">Yelp</a></b> · <b><a href="http://www.driftwooddeliandmarket.com/menu.html">Menu</a></b>','past'],
+          [37.423955, -122.144545, 'Fambrini Terrace Cafe: <b><i><a href="http://www.yelp.com/biz/fambrinis-terrace-cafe-palo-alto">Yelp</a></i></b> · <b><i><a href="http://www.fambriniscafe.com/en_EN/index/menu">Menu</a></i></b> ','past'],
+            [37.444637,-122.165141,'Gelataio: <i><b><a href="http://www.yelp.com/biz/gelataio-palo-alto-3">Yelp</a></i> · <a href="http://gelataio.us"><i>Menu</a></i></b>','past'],
+        [37.444783,-122.145013,'Children\'s Library','past'],
+        [37.362242,-122.027284,'Bon Chon Chicken : <i><b><a href="http://www.yelp.com/biz/bon-chon-chicken-sunnyvale-2?osq=bonchon+chicken">Yelp</a></i> · <a href="http://www.bonchonbayarea.com/BCMenu080614.pdf"><i>Menu</a></i></b>','past'] ,
+          [37.466426,-122.223625,'Chuck\'s Donuts: <b><i><a href="http://www.yelp.com/biz/chucks-donuts-redwood-city">Yelp</a></i></b>  ', 'green'],
+          [37.433227,-122.129482,'Palo Alto Breakfast House: <i><b><a href="http://www.yelp.com/biz/palo-alto-breakfast-house-palo-alto">Yelp</a></i>  ','past'],
+          [37.425762,-122.144990, 'Joanie\'s Café: <i><b><a href="http://www.yelp.com/biz/joanies-café-palo-alto-2">Yelp</a></i> · <a href="http://gelataio.us"><i>Menu</a></i></b>','past'],
+          [37.437596,-122.173009,'Tootsies At the Stanford Barn: <i><b><a href="http://www.yelp.com/biz/tootsies-at-the-stanford-barn-palo-alto">Yelp</a></i> · <a href="http://www.tootsiesbarn.com/menu/brunch"><i>Menu</a></i></b>','past'],
+          [37.444619,-122.161578,'Coupa Café: <i><b><a href="http://www.yelp.com/biz/coupa-café-palo-alto-3">Yelp</a></i> · <a href="http://www.coupacafe.com/wp-content/uploads/2012/03/Menu-07242014.pdf"><i>Menu</a></i></b>','past']
+        ]);
 
+        var options = {
+            mapType: 'styledMap',
+            zoomLevel: 12,
+            showTip: true,
+            useMapTypeControl: true,
+            maps: {
+              // Your custom mapTypeId holding custom map styles.
+              styledMap: {
+                name: 'Styled Map', // This name will be displayed in the map type control.
+                styles: [
+                  {featureType: 'poi.attraction',
+                   stylers: [{color: '#fce8b2'}]
+                  },
+                  {featureType: 'road.highway',
+                   stylers: [{hue: '#0277bd'}, {saturation: -50}]
+                  },
+                  {featureType: 'road.highway',
+                   elementType: 'labels.icon',
+                   stylers: [{hue: '#000'}, {saturation: 100}, {lightness: 50}]
+                  },
+                  {featureType: 'landscape',
+                   stylers: [{hue: '#259b24'}, {saturation: 10}, {lightness: -22}]
+                  }
+            ]}}
+          };
+
+        var map = new google.visualization.Map(document.getElementById('map_div'));
+        map.draw(data, options);
+      }
+
+    </script>
+  </head>
+
+  <body>
+
+      <div class="chartWithOverlay">
+        <div id="map_div" style="height: 500px; width: 100%"></div>
+        <div class="overlay">
+        <h2 class="section-heading">Sites Visited</h2>
+
+  </div>
+
+  </body>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
