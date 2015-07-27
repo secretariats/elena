@@ -1,7 +1,15 @@
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
 body {
     overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+
+ 
 
 .text-muted {
     color: #777;
@@ -12,7 +20,6 @@ body {
 }
 
 p {
-    font-size: 14px;
     line-height: 1.75;
 }
 
@@ -163,6 +170,17 @@ fieldset[disabled] .btn-xl.active {
     background-color: #fff;
 }
 
+section {
+    padding: 100px 0;
+}
+
+aside {
+    padding: 50px 0;
+}
+
+.no-padding {
+    padding: 0;
+}
 
 .navbar-default {
     border-color: rgba(34,34,34,.05);
@@ -211,7 +229,7 @@ fieldset[disabled] .btn-xl.active {
 
 @media(min-width:768px) {
     .navbar-default {
-/*        border-color: rgba(255,255,255,.3);*/
+        border-color: rgba(255,255,255,.3);
         background-color: transparent;
     }
 
@@ -260,68 +278,66 @@ fieldset[disabled] .btn-xl.active {
     }
 }
 
-
 header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
     text-align: center;
     color: #fff;
-    background-attachment: scroll;
     background-image: url(../img/header-bg.jpg);
-    background-position: center center;
-    background-repeat: none;
+    background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+} 
+
+hr {
+    max-width: 50px;
+    border-color: #f05f40;
+    border-width: 3px;
 }
 
-header .intro-text {
-    padding-top: 100px;
-    padding-bottom: 50px;
+hr.light {
+    border-color: #fff;
 }
 
-header .intro-text .intro-lead-in {
-    margin-bottom: 25px;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 22px;
-    font-style: italic;
-    line-height: 22px;
+.btn-primary {
+    border-color: #f05f40;
+    color: #fff;
+    background-color: #f05f40;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
 }
 
-header .intro-text .intro-heading {
-    margin-bottom: 25px;
+.btn-xl {
+    padding: 15px 30px;
+}
+header .header-content {
+    position: relative;
+    width: 100%;
+    padding: 100px 15px;
+    text-align: center;
+}
+
+header .header-content .header-content-inner h1 {
+    margin-top: 0;
+    margin-bottom: 0;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 50px;
 }
 
-@media(min-width:768px) {
-    header .intro-text {
-        padding-top: 300px;
-        padding-bottom: 200px;
-    }
-
-    header .intro-text .intro-lead-in {
-        margin-bottom: 25px;
-        font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 40px;
-        font-style: italic;
-        line-height: 40px;
-    }
-
-    header .intro-text .intro-heading {
-        margin-bottom: 50px;
-        text-transform: uppercase;
-        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 75px;
-        font-weight: 700;
-        line-height: 75px;
-    }
+header .header-content .header-content-inner hr {
+    margin: 30px auto;
 }
+
+header .header-content .header-content-inner p {
+    margin-bottom: 50px;
+    color: rgba(255,255,255,.7);
+} 
 
 section {
-    padding: 100px 0;
+    padding: 0px 0;
 }
 
 section h2.section-heading {
@@ -341,7 +357,7 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
     section {
-        padding: 150px 0;
+        padding: 0px 0;
     }
 }
 
@@ -403,6 +419,35 @@ section h3.section-subheading {
     max-width: 400px;
     text-align: center;
     background-color: #fff;
+}
+
+
+@media(min-width:768px) {
+    header {
+        min-height: 100%;
+    }
+
+    header .header-content {
+        position: absolute;
+        top: 50%;
+        padding: 0 50px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    header .header-content .header-content-inner {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1000px;
+    }
+
+    header .header-content .header-content-inner p {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 80%;
+        font-size: 18px;
+    }
 }
 
 #recipes .recipes-item .recipes-caption h4 {
@@ -789,7 +834,7 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
     section {
-        padding: 150px 0;
+        padding: 100px 0;
     }
 }
 
@@ -1314,3 +1359,17 @@ body {
     webkit-tap-highlight-color: #fed136;
 }
 }
+
+@media (max-width: 550px) {
+    .big-container {
+        display: none;
+    }
+}
+@media (min-width: 550px) {
+    .small-container {
+        display: none;
+    }
+} 
+ 
+ 
+</style>
