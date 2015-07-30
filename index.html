@@ -55,7 +55,7 @@
                         <a class="page-scroll" href="#media">Media</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#calendar">TV</a>
+                        <a class="page-scroll" href="#tv">TV</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#recipes">Recipes</a>
@@ -84,11 +84,11 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>Happy Birthday!</h1>
-                <hr>
-                <p>20.</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">❤</a>
-            </div>
+                <h1></h1>
+                <!-- <hr> -->
+                <p></p>
+<!--                 <a href="#message" class="btn btn-primary btn-xl page-scroll">❤</a>
+ -->            </div>
         </div>
     </header>
  
@@ -349,15 +349,17 @@
     </section>
 
     <!-- TV Calendar Section -->
-    <section id="calendar">
+    <section id="tv">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">TV Show Calendar</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">I don't need a fancy planner.</h3>
                 </div>
             </div>
             <div class="row">
+            <iframe id="JotFormIFrame" onload="window.parent.scrollTo(0,0)" allowtransparency="true" src="http://form.jotform.us/form/52095834648162" frameborder="0" style="width:100%; height:514px; border:none;" scrolling="no"></iframe>
+<script type="text/javascript">window.handleIFrameMessage = function(e) {var args = e.data.split(":");var iframe = document.getElementById("JotFormIFrame");if (!iframe)return;switch (args[0]) {case "scrollIntoView":iframe.scrollIntoView();break;case "setHeight":iframe.style.height = args[1] + "px";break;case "collapseErrorPage":if (iframe.clientHeight > window.innerHeight) {iframe.style.height = window.innerHeight + "px";}break;case "reloadPage":window.location.reload();break;}};if (window.addEventListener) {window.addEventListener("message", handleIFrameMessage, false);} else if (window.attachEvent) {window.attachEvent("onmessage", handleIFrameMessage);}</script>
                 <div class="calendar" style="text-align:center">
                     <iframe src="https://www.google.com/calendar/embed?height=400&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=so35i067bolghi8im93sbn1ade8g9tsh%40import.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FChicago" style=" border-width:0 " width="70%" height="500" frameborder="0" scrolling="no"></iframe></div>
                 </div>
