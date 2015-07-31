@@ -814,7 +814,7 @@ ul.social-buttons li a:active {
 }
 
 section {
-    padding: 100px 0;
+    padding: 0px 0;
 }
 
 section h2.section-heading {
@@ -836,7 +836,9 @@ section h3.section-subheading {
     section {
         padding: 100px 0;
     }
+
 }
+
 
 .service-heading {
     margin: 15px 0;
