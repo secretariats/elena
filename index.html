@@ -56,16 +56,13 @@
                         <a class="page-scroll" href="#media">Media</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#taste">Stats</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#tv">TV</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#recipes">Recipes</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#bucketlist">Bucketlist</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#team">Photos</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#goodies">:)</a>
@@ -122,8 +119,8 @@
                 </div>
             </div>
             <center><iframe src="http://www.jotform.com/table/52101435854045" frameborder="0" style="width: 80%; height: 100%; min-height: 0px; border:none;" scrolling="auto"></iframe></center>
-
-            <iframe id="JotFormIFrame" onload="window.parent.scrollTo(0,0)" allowtransparency="true" src="http://form.jotform.us/form/52100428266144" frameborder="0" style="width:100%; height:578px; border:none;" scrolling="no"></iframe>
+            <div class="negative"></div>
+            <iframe id="JotFormIFrame" onload="window.parent.scrollTo(0,0)" allowtransparency="true" src="http://form.jotform.us/form/52100428266144" frameborder="0" style="width:100%; height:-78px; border:none;" scrolling="no"></iframe>
 <script type="text/javascript">window.handleIFrameMessage = function(e) {var args = e.data.split(":");var iframe = document.getElementById("JotFormIFrame");if (!iframe)return;switch (args[0]) {case "scrollIntoView":iframe.scrollIntoView();break;case "setHeight":iframe.style.height = args[1] + "px";break;case "collapseErrorPage":if (iframe.clientHeight > window.innerHeight) {iframe.style.height = window.innerHeight + "px";}break;case "reloadPage":window.location.reload();break;}};if (window.addEventListener) {window.addEventListener("message", handleIFrameMessage, false);} else if (window.attachEvent) {window.attachEvent("onmessage", handleIFrameMessage);}</script>
                 </div>
             </div>
@@ -131,6 +128,18 @@
     </section>
 
     
+
+
+
+    <section id="taste" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Taste Tracker</h2>
+                    <h3 class="section-subheading text-muted">a.k.a., proof my taste is better.</h3>
+                </div>
+            </div>
 
     <!-- Movie Charts Section -->
     <script src="http://code.highcharts.com/highcharts.js"></script>
@@ -312,20 +321,8 @@
 
     </script>
  
-
-
-    <section id="calendar" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Taste Tracker</h2>
-                    <h3 class="section-subheading text-muted">a.k.a., proof my taste is better.</h3>
-                </div>
-            </div>
             <div class="row">
                     <div id="tastecharts" style="min-width: 310px; height: 400px; max-width: 800px; margin: 0 auto"></div>
-
                 </div>
             </div>
         </div>
@@ -412,7 +409,7 @@
                     </a>
                     <div class="recipes-caption">
                         <h4>Egg Nests</h4>
-                        <p class="text-muted">Website Design</p>
+                        <p class="text-muted">Food</p>
                     </div>
                 </div>
                    <div class="col-md-3 col-sm-6 recipes-item">
@@ -648,7 +645,7 @@
         </div>
     </div>
 
-    <section id="tv">
+    <section id="goodies">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -795,7 +792,7 @@
     .overlay {
            position: absolute;
            top: 20px;   /* chartArea top  */
-           left: 22%; /* chartArea left */
+           left: 28%; /* chartArea left */
     }
    </style>
 
