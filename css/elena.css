@@ -1298,6 +1298,7 @@ img::-moz-selection {
     background: 0 0;
 }
 
+
 body {
     webkit-tap-highlight-color: #d23f6f;
 }
@@ -1314,5 +1315,55 @@ body {
     }
 } 
  
+@media only screen and (min-width: 768px) {
+  .goodies-modal {
+    text-align: center;
+        overflow-y: auto;
+
+  }
+  .goodies-modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 25%;
+  }
+  .goodies-modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+  }
+  .goodies-modal.fade .goodies-modal-dialog {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .goodies-modal.fade.in .goodies-modal-dialog {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    //-webkit-transform: translate3d(0, -300px, 0);
+    //transform: translate3d(0, -300px, 0);
+    opacity: 1;
+  }
+}
+
+h2 {
+  text-align: center;
+}
+
+.p {
+  text-align: center;
+  padding-top: 130px;
+}
  
+ .lessSpace { /*prevent form from being too close*/
+    margin-bottom:-30px;
+}
+
 </style>

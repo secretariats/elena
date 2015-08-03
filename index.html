@@ -109,7 +109,7 @@
     </section>
 
 
-    <!-- Services Section -->
+    <!-- Media Section -->
     <section id="media">
         <div class="container">
             <div class="row">
@@ -118,11 +118,11 @@
                     <h3 class="section-subheading text-muted">Because sometimes even I have trouble keeping track.</h3>
                 </div>
             </div>
-            <center><iframe src="http://www.jotform.com/table/52101435854045" frameborder="0" style="width: 80%; height: 100%; min-height: 0px; border:none;" scrolling="auto"></iframe></center>
-            <div class="negative"></div>
-            <iframe id="JotFormIFrame" onload="window.parent.scrollTo(0,0)" allowtransparency="true" src="http://form.jotform.us/form/52100428266144" frameborder="0" style="width:100%; height:-78px; border:none;" scrolling="no"></iframe>
-<script type="text/javascript">window.handleIFrameMessage = function(e) {var args = e.data.split(":");var iframe = document.getElementById("JotFormIFrame");if (!iframe)return;switch (args[0]) {case "scrollIntoView":iframe.scrollIntoView();break;case "setHeight":iframe.style.height = args[1] + "px";break;case "collapseErrorPage":if (iframe.clientHeight > window.innerHeight) {iframe.style.height = window.innerHeight + "px";}break;case "reloadPage":window.location.reload();break;}};if (window.addEventListener) {window.addEventListener("message", handleIFrameMessage, false);} else if (window.attachEvent) {window.attachEvent("onmessage", handleIFrameMessage);}</script>
-                </div>
+
+            <div class="lessSpace"></div>
+            <center><button  class="btn btn-small btn-primary" data-toggle="modal" data-target="#mediaModal">View Suggestions</button></center><br>
+            <h3><iframe id="JotFormIFrame" onload="window.parent.scrollTo(0,0)" allowtransparency="true" src="http://form.jotform.us/form/52100428266144" frameborder="0" style="width:100%; border:none;" scrolling="no"></iframe><script type="text/javascript">window.handleIFrameMessage = function(e) {var args = e.data.split(":");var iframe = document.getElementById("JotFormIFrame");if (!iframe)return;switch (args[0]) {case "scrollIntoView":iframe.scrollIntoView();break;case "setHeight":iframe.style.height = args[1] + "px";break;case "collapseErrorPage":if (iframe.clientHeight > window.innerHeight) {iframe.style.height = window.innerHeight + "px";}break;case "reloadPage":window.location.reload();break;}};if (window.addEventListener) {window.addEventListener("message", handleIFrameMessage, false);} else if (window.attachEvent) {window.attachEvent("onmessage", handleIFrameMessage);}</script></h3> 
+                 </div>
             </div>
         </div>
     </section>
@@ -347,7 +347,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">recipes</h2>
-                    <h3 class="section-subheading text-muted">Essentially, food Cecile would like.</h3>
+                    <h3 class="section-subheading text-muted">Essentially, simple recipes for food Cecile would like.</h3>
                 </div>
             </div>
              <div class="col-md-3 col-sm-6 recipes-item">
@@ -463,8 +463,6 @@
                         <p class="text-muted">Dessert</p>
                     </div>
                 </div>
-               
-             
             </div>
         </div>
     </section>
@@ -531,10 +529,9 @@
                              Non-stick Cooking Spray<br><br>
                             <b>Preparation Instructions</b><br>
                             Preheat the oven to 400 degrees.<br>
-                            Bake the potatoes until almost tender (potatoes should still have a little bite) 45 minutes to 1 hour. Allow to cool, and then peel and grate them. Season well with salt and pepper.<br>
-                            INCREASE OVEN TEMP TO 425 DEGREES.<br>
-                            Spray two muffin pans generously with cooking spray. Scoop 3 to 4 tablespoons of grated potato into each muffin cup. Use your fingers to gently press the sides and bottom in each muffin hole to make a nest (don't press the potatoes firmly against the pan; they should sit lightly in the pan.) Spray again (very lightly!) with cooking spray. Bake for 15 to 20 minutes. Watch and make sure they do not burn. (If they seem like they're not browning, kick up the temp to 450.) Remove when the nests are golden brown.<br>
-                            Allow the nests to cool. Crack an egg into each one. Sprinkle with salt and pepper and bake until the whites are set, about 15 minutes. Don't be concerned if some whites bake differently; no two nests will look alike!<br>
+                            Bake the potatoes until almost tender (potatoes should still have a little bite) 45 minutes to 1 hour. Allow to cool, and then peel and grate them. Season well with salt and pepper. INCREASE OVEN TEMP TO 425 DEGREES.<br>
+                            Spray 2 muffin pans generously with cooking spray. Scoop 3 to 4 tablespoons of grated potato into each muffin cup. Use your fingers to gently press the sides and bottom in each muffin hole to make a nest (don't press the potatoes firmly against the pan; they should sit lightly in the pan.) Spray again (very lightly!) with cooking spray. Bake for 15 to 20 minutes. Watch and make sure they do not burn. (If they seem like they're not browning, kick up the temp to 450.) Remove when the nests are golden brown.<br>
+                            Allow the nests to cool. Crack an egg into each one. Sprinkle with salt and pepper and bake until the whites are set, about 15 minutes.  <br>
                             Remove from the muffin pan with a spoon or fork and serve.<p></p>
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
                         </div>
@@ -591,10 +588,12 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <h2>Project Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-responsive img-centered" src="img/recipes/golden-preview.png" alt="">
-                            <p>http://www.bakerella.com/more-minis/comment-page-2/#comments</p>
+                            <h2><a href="http://www.bakerella.com/more-minis/comment-page-2/#comments">Polar Bear Cupcakes</a></h2>
+                            <p class="item-intro text-muted">Or these could totally become Samoyed cupcakes.</p>
+                            <img class="img-responsive img-centered" src="img/recipes/polarbears2.png" alt="">
+                            <p>Basically just chocolate cupcakes decorated as you wish. ALTERNATIVELY, she also made these <a href="http://www.bakerella.com/easy-little-pandas/">pandas</a> that appeal to me because chocolate chips, but polar bears >> pandas so tough call! We can also totally improvise with our better tasting ingredients I bet.</p>
+
+                            <img class="img-responsive img-centered" src="img/recipes/pandas2.png" alt="">
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
                         </div>
                     </div>
@@ -646,9 +645,14 @@
                             <!-- Project Details Go Here -->
                             <h2>Caramel Brownies</h2>
                             <p class="item-intro text-muted">Because I'm still on a path to recreate Kelly's from Senior year of high school.</p>
-                            <img class="img-responsive img-centered" src="img/recipes/dreams-preview.png" alt="">
-                            <p>OR ALTERNATIVELY, look at <a href="http://www.recipegirl.com/2012/01/27/caramel-brownies/">this recipe</a>. So simple, so easy, so beautiful. Some of my favorite store-bought chocolates and your favorite brownie mix.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
+                            <img class="img-responsive img-centered" src="img/recipes/brownies2.png" alt="">
+<p> <b>DIRECTIONS:</b></p>
+<p>1. Preheat the oven to whatever it says on your brownie mix box (325 degrees F for Ghirardelli). Spray a 9x9-inch metal pan with nonstick spray and then line with a 9x15-inch strip of parchment paper, letting it come up and over two sides. Spray the parchment with nonstick spray too.</p>
+<p>2. In a large bowl, prepare your brownie batter as directed on the box. Spread 1/2 of the brownie batter into your prepared pan. Place the chocolate-covered caramels on top in 5 rows of 5. Spoon the remaining brownie batter on top and spread to cover.</p>
+<p>3. Bake the brownies as directed on your brownie mix box for a 9x9-inch pan.</p>
+<p>4. Let the brownies cool completely and then gently lift the parchment paper and brownies out of the pan and onto a cutting board. Cut into squares and serve!</p>
+
+</p>                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
                         </div>
                     </div>
                 </div>
@@ -660,41 +664,107 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Goodies</h2>
+                    <h2 class="section-heading">Virtual Presents</h2>
                     <h3 class="section-subheading text-muted">I figured digital presents aren't as much of a burden.</h3>
                 </div>
             </div>
             <div class="row">
            <div class="row text-center">
                 <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
+                    <a href="#" data-toggle="modal" data-target="#fandangoModal"><span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-headphones fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Fandango</h4>
-                    <p class="text-muted">7FH7-B2H588-GBAA</p>
+                    <h4 class="service-heading"> Fandango</a></h4>
+                    <p class="text-muted">Because movies.</p>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <a href="https://www.dropbox.com/s/i4tzz9b7gy7e9v7/soulcycle.psd?dl=0"><i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-desktop fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">PSDs</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    <h4 class="service-heading">PSDs</h4></a>
+                    <p class="text-muted">Obviously I'm still here for all your photoshop needs, but for the rare occasions when I'm not at my laptop!</p>
                 </div>
                 <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
+                    <a href="#" data-toggle="modal" data-target="#alfredModal"><span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-file-video-o fa-stack-1x  fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Alfred</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>                </div>
+                    <h4 class="service-heading">Alfred</h4></a>
+                    <p class="text-muted">I don't know if you've already purchased this... if you have gift it to a friend and increase their quality of life by 100%</p>                </div>
             </div>
         </div>
     </section>
 
  
+      <!-- Modal content-->
+      <div class="goodies-modal modal fade" id="mediaModal" tabindex="-1" role="dialog" aria-labelledby="fandangoModal" aria-hidden="true" >
+          <div class="modal-dialog modal-lg" style="500px">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Watchlist</h4>
+              </div>
+              <div class="modal-body" >
 
+            <center><iframe src="http://www.jotform.com/table/52101435854045" frameborder="0" style="width: 100%; height: 100%; min-height: 150px;  scrolling:auto"></iframe></center>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <!-- FANDANGO !-->
+        <div class="goodies-modal modal fade" id="fandangoModal" tabindex="-1" role="dialog" aria-labelledby="fandangoModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Fandango Gift Card</h4>
+              </div>
+              <div class="modal-body">
+                <h3>7FH7-B2H588-GBAA</h3>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ALFRED !-->
+        <div class="goodies-modal modal fade" id="alfredModal" tabindex="-1" role="dialog" aria-labelledby="fandangoModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Alfred Premium</h4>
+              </div>
+              <div class="modal-body">
+                <h3>7FH7-B2H588-GBAA</h3>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+<script>$('.modal').on('shown.bs.modal', function() {
+    $(this).find('.modal-dialog').css({
+        'margin-top': function () {
+            return -($(this).outerHeight() / 2);
+        },
+        'margin-left': function () {
+            return -($(this).outerWidth() / 2);
+        }
+    });
+});</script>
 <!-- 
     <section class="no-padding" id="recipes">
         <div class="container-fluid">
