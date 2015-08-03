@@ -20,7 +20,7 @@ body {
 }
 
 p {
-    line-height: 1.75;
+    line-height: 1.5;
 }
 
 p.large {
@@ -1221,7 +1221,7 @@ ul.social-buttons li a:active {
 }
 
 .recipes-modal .modal-content p {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .recipes-modal .modal-content p.item-intro {
@@ -1357,13 +1357,10 @@ h2 {
   text-align: center;
 }
 
-.p {
-  text-align: center;
-  padding-top: 130px;
-}
  
  .lessSpace { /*prevent form from being too close*/
-    margin-bottom:-30px;
+    margin-bottom:-30repx;
 }
+ 
 
 </style>
