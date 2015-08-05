@@ -59,10 +59,10 @@
                         <a class="page-scroll" href="#taste">Stats</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#tv">TV</a>
+                        <a class="page-scroll" href="#calendar">Calendar</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#recipes">Recipes</a>
+                        <a class="page-scroll" href="#recipes">Bucketlist</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#goodies">:)</a>
@@ -328,22 +328,18 @@
     </section>
 
     <!-- TV Calendar Section -->
-    <section id="tv">
+    <section id="calendar">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">TV Show Calendar</h2>
+                    <h2 class="section-heading">Calendar</h2>
                     <h3 class="section-subheading text-muted">I don't need a fancy planner.</h3>
                 </div>
             </div>
             <div class="row">
 
                 <div class="calendar" style="text-align:center">
-<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=v0i48u54q3bte02ccm3iisdo9k%40group.calendar.google.com&amp;color=%232F6309&amp;src=5hku99i9nbt1hi8vv5coov6mhipts25e%40import.calendar.google.com&amp;color=%23691426&amp;src=3cnijnt06pa0qf5arv8vemlouo%40group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="90%" height="600" frameborder="0" scrolling="no"></iframe>  </div>
-
-            </div>
-        </div>
-    </section>
+<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=v0i48u54q3bte02ccm3iisdo9k%40group.calendar.google.com&amp;color=%23B1440E&amp;src=5hku99i9nbt1hi8vv5coov6mhipts25e%40import.calendar.google.com&amp;color=%23B1365F&amp;src=3cnijnt06pa0qf5arv8vemlouo%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="90%" height="600" frameborder="0" scrolling="no"></iframe>   </section>
 
    <!-- bucketlist Grid Section -->
     <section id="recipes" class="bg-light-gray">
@@ -379,7 +375,7 @@
                         <img src="img/recipes/midnightmunchies.png" class="img-responsive" alt="">
                     </a>
                     <div class="recipes-caption">
-                        <h4>Midnight Munchies</h4>
+                        <h4>MunchCakes</h4>
                         <p class="text-muted">Food Delivery</p>
                     </div>
                 </div>
@@ -390,7 +386,7 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/recipes/ccc.png" class="img-responsive" alt="">
+                        <img src="img/recipes/sf.png" class="img-responsive" alt="">
                     </a>
                     <div class="recipes-caption">
                         <h4>San Francisco</h4>
@@ -556,7 +552,7 @@
                             <p><a href="http://www.yelp.com/biz/tommys-joynt-san-francisco"><b>Tommy's Joynt</b></a>: Roast beef, beef brisket, salmon, mashed potatoes, green beans... all of my ultimate comfort food. This is the place I've been searching for my whole life. <a href="http://www.netbaan.com/tommysjoynt/menu2.html">(Menu)</a> 
                             <p>
                             Then let's grab an Ike's and go for a walk:
-                            <p><a href="http://www.yelp.com/biz/crissy-field-san-francisco-2?osq=views">Crissy Field</a> | <a href="http://www.yelp.com/biz/twin-peaks-san-francisco"><b>Twin Peaks</b></a> |  <b><a href="http://www.yelp.com/biz/lands-end-trail-san-francisco?page_src=related_bizes">Land's End Trail</a></b> | <b><a href="http://www.yelp.com/biz/strawberry-hill-san-francisco?page_src=related_bizes">Strawberry Hill</b></a> | <b><a href="http://www.yelp.com/biz/the-16th-avenue-tiled-steps-project-san-francisco">The 16th Avenue Tiled Steps Project</a></b></p>
+                            <p><a href="http://www.yelp.com/biz/crissy-field-san-francisco-2?osq=views"><b>Crissy Field</b></a> | <a href="http://www.yelp.com/biz/twin-peaks-san-francisco"><b>Twin Peaks</b></a> | <a href="http://www.yelp.com/biz/fort-point-san-francisco">Fort Point</a> | <b><a href="http://www.yelp.com/biz/lands-end-trail-san-francisco?page_src=related_bizes">Land's End Trail</a></b> | <b><a href="http://www.yelp.com/biz/strawberry-hill-san-francisco?page_src=related_bizes">Strawberry Hill</b></a> | <b><a href="http://www.yelp.com/biz/the-16th-avenue-tiled-steps-project-san-francisco">The 16th Avenue Tiled Steps Project</a></b></p>
                          <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
                         </div>
                     </div>
@@ -915,24 +911,55 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Lat', 'Long', 'Name','Marker'],
+            // [37.419110, -122.135093, 'Driftwood Deli: <b><i><a href="http://www.yelp.com/biz/driftwood-deli-and-market-palo-alto">Yelp</a></i></b> · <b><i><a href="http://www.driftwooddeliandmarket.com/menu.html">Menu</a></i></b>','past', "food"],
+            // [37.423955, -122.144545, 'Fambrini Terrace Cafe: <b><i><a href="http://www.yelp.com/biz/fambrinis-terrace-cafe-palo-alto">Yelp</a></i></b> · <b><i><a href="http://www.fambriniscafe.com/en_EN/index/menu">Menu</a></i></b> ','past',"food"],
+            // [37.444637,-122.165141,'Gelataio: <i><b><a href="http://www.yelp.com/biz/gelataio-palo-alto-3">Yelp</a></i> · <a href="http://gelataio.us"><i>Menu</a></i></b>','past',"dessert"],
+            // [37.444783,-122.145013,'Children\'s Library','past'],
+            // [37.362242,-122.027284,'Bon Chon Chicken : <i><b><a href="http://www.yelp.com/biz/bon-chon-chicken-sunnyvale-2?osq=bonchon+chicken">Yelp</a></i> · <a href="http://www.bonchonbayarea.com/BCMenu080614.pdf"><i>Menu</a></i></b>','past',"food"] ,
+            // [37.466426,-122.223625,'Chuck\'s Donuts: <b><i><a href="http://www.yelp.com/biz/chucks-donuts-redwood-city">Yelp</a></i></b>  ', 'past',"dessert"],
+            // [37.433227,-122.129482,'Palo Alto Breakfast House: <i><b><a href="http://www.yelp.com/biz/palo-alto-breakfast-house-palo-alto">Yelp</a></i>  ','past',"food"],
+            // [37.425762,-122.144990, 'Joanie\'s Café: <i><b><a href="http://www.yelp.com/biz/joanies-café-palo-alto-2">Yelp</a></i> · <a href="http://gelataio.us"><i>Menu</a></i></b>','past',"food"],
+            // [37.437596,-122.173009,'Tootsies At the Stanford Barn: <i><b><a href="http://www.yelp.com/biz/tootsies-at-the-stanford-barn-palo-alto">Yelp</a></i> · <a href="http://www.tootsiesbarn.com/menu/brunch"><i>Menu</a></i></b>','past',"food"],
+            // [37.444619,-122.161578,'Coupa Café: <i><b><a href="http://www.yelp.com/biz/coupa-café-palo-alto-3">Yelp</a></i> · <a href="http://www.coupacafe.com/wp-content/uploads/2012/03/Menu-07242014.pdf"><i>Menu</a></i></b>','past',"food"],
+            // [37.425762,-122.144990, 'The Ace of Sandwiches: <i><b><a href="http://www.yelp.com/biz/the-ace-of-sandwiches-palo-alto">Yelp</a></i> · <a href="http://www.theaceofsandwiches.com/menu"><i>Menu</a></i></b>','past',"food"],
+            // [37.425940,-122.144826, 'Mediterranean Wraps: <i><b><a href="http://www.yelp.com/biz/mediterranean-wraps-palo-alto">Yelp</a></i> · <a href="https://www.waiter.com/takeout-delivery/medwraps/palo-alto-ca/433-south-california-avenue"><i>Menu</a></i></b>','future',"food"],
+            // [37.425762,-122.144990, 'Tommy\'s Joint: <i><b><a href="http://www.yelp.com/biz/tommys-joynt-san-francisco">Yelp</a></i> · <a href="http://www.netbaan.com/tommysjoynt/menu2.html"><i>Menu</a></i></b>','future',"food"],
+            // [37.784733,-122.403420, 'Super Duper Burger: <i><b><a href="http://www.yelp.com/biz/super-duper-burgers-san-francisco-6">Yelp</a></i> · <a href="http://superduperburgers.com"><i>Menu</a></i></b>','future',"food"],
+            // [37.7624429,-122.3967113, 'Chez Maman: <i><b><a href="http://www.yelp.com/biz/chez-maman-san-francisco-9">Yelp</a></i> · <a href="http://chezmamansf.com/cmwmenu.html"><i>Menu</a></i></b>','future',"food"],
+            // [37.7502024 ,-122.4200407, 'Anthony’s Cookies: <i><b><a href="http://www.yelp.com/biz/anthonys-cookies-san-francisco-2">Yelp</a></i> · <a href="http://anthonyscookies.com/menu/"><i>Menu</a></i></b>','future',"dessert"],
+            // [37.7919419 ,-122.4210156, 'Bob’s Donut & Pastry Shop: <i><b><a href="http://www.yelp.com/biz/bobs-donut-and-pastry-shop-san-francisco-2">Yelp</a></i> · <a href="http://www.bobsdonutssf.com/menu/"><i>Menu</a></i></b>','future',"dessert"],
+            // [37.753093,-122.407673, 'Dynamo Donut + Coffee: <i><b><a href="http://www.yelp.com/biz/dynamo-donut-coffee-san-francisco-2?page_src=related_bizes">Yelp</a></i> · <a href="https://kudos.tc/om/dynamotwoday"><i>Menu</a></i></b>','future',"dessert"],
+            // [37.764270 ,-122.430571, 'Ike\'s Place: <i><b><a href="http://www.yelp.com/biz/ikes-place-san-francisco">Yelp</a></i> · <a href="http://ilikeikesplace.com"><i>Menu</a></i></b>','future',"food"],
+            // [37.759487 ,-122.419443, 'Little Heaven Deli: <i><b><a href="http://www.yelp.com/biz/little-heaven-deli-san-francisco">Yelp</a></i> ','future'],
+
+
+
             [37.419110, -122.135093, 'Driftwood Deli: <b><i><a href="http://www.yelp.com/biz/driftwood-deli-and-market-palo-alto">Yelp</a></i></b> · <b><i><a href="http://www.driftwooddeliandmarket.com/menu.html">Menu</a></i></b>','past'],
             [37.423955, -122.144545, 'Fambrini Terrace Cafe: <b><i><a href="http://www.yelp.com/biz/fambrinis-terrace-cafe-palo-alto">Yelp</a></i></b> · <b><i><a href="http://www.fambriniscafe.com/en_EN/index/menu">Menu</a></i></b> ','past'],
             [37.444637,-122.165141,'Gelataio: <i><b><a href="http://www.yelp.com/biz/gelataio-palo-alto-3">Yelp</a></i> · <a href="http://gelataio.us"><i>Menu</a></i></b>','past'],
             [37.444783,-122.145013,'Children\'s Library','past'],
             [37.362242,-122.027284,'Bon Chon Chicken : <i><b><a href="http://www.yelp.com/biz/bon-chon-chicken-sunnyvale-2?osq=bonchon+chicken">Yelp</a></i> · <a href="http://www.bonchonbayarea.com/BCMenu080614.pdf"><i>Menu</a></i></b>','past'] ,
-            [37.466426,-122.223625,'Chuck\'s Donuts: <b><i><a href="http://www.yelp.com/biz/chucks-donuts-redwood-city">Yelp</a></i></b>  ', 'green'],
+            [37.466426,-122.223625,'Chuck\'s Donuts: <b><i><a href="http://www.yelp.com/biz/chucks-donuts-redwood-city">Yelp</a></i></b>  ', 'past'],
             [37.433227,-122.129482,'Palo Alto Breakfast House: <i><b><a href="http://www.yelp.com/biz/palo-alto-breakfast-house-palo-alto">Yelp</a></i>  ','past'],
             [37.425762,-122.144990, 'Joanie\'s Café: <i><b><a href="http://www.yelp.com/biz/joanies-café-palo-alto-2">Yelp</a></i> · <a href="http://gelataio.us"><i>Menu</a></i></b>','past'],
             [37.437596,-122.173009,'Tootsies At the Stanford Barn: <i><b><a href="http://www.yelp.com/biz/tootsies-at-the-stanford-barn-palo-alto">Yelp</a></i> · <a href="http://www.tootsiesbarn.com/menu/brunch"><i>Menu</a></i></b>','past'],
             [37.444619,-122.161578,'Coupa Café: <i><b><a href="http://www.yelp.com/biz/coupa-café-palo-alto-3">Yelp</a></i> · <a href="http://www.coupacafe.com/wp-content/uploads/2012/03/Menu-07242014.pdf"><i>Menu</a></i></b>','past'],
             [37.425762,-122.144990, 'The Ace of Sandwiches: <i><b><a href="http://www.yelp.com/biz/the-ace-of-sandwiches-palo-alto">Yelp</a></i> · <a href="http://www.theaceofsandwiches.com/menu"><i>Menu</a></i></b>','past'],
-
+            [37.425940,-122.144826, 'Mediterranean Wraps: <i><b><a href="http://www.yelp.com/biz/mediterranean-wraps-palo-alto">Yelp</a></i> · <a href="https://www.waiter.com/takeout-delivery/medwraps/palo-alto-ca/433-south-california-avenue"><i>Menu</a></i></b>','future'],
+            [37.425762,-122.144990, 'Tommy\'s Joint: <i><b><a href="http://www.yelp.com/biz/tommys-joynt-san-francisco">Yelp</a></i> · <a href="http://www.netbaan.com/tommysjoynt/menu2.html"><i>Menu</a></i></b>','future'],
+            [37.784733,-122.403420, 'Super Duper Burger: <i><b><a href="http://www.yelp.com/biz/super-duper-burgers-san-francisco-6">Yelp</a></i> · <a href="http://superduperburgers.com"><i>Menu</a></i></b>','future'],
+            [37.7624429,-122.3967113, 'Chez Maman: <i><b><a href="http://www.yelp.com/biz/chez-maman-san-francisco-9">Yelp</a></i> · <a href="http://chezmamansf.com/cmwmenu.html"><i>Menu</a></i></b>','future'],
+            [37.7502024 ,-122.4200407, 'Anthony’s Cookies: <i><b><a href="http://www.yelp.com/biz/anthonys-cookies-san-francisco-2">Yelp</a></i> · <a href="http://anthonyscookies.com/menu/"><i>Menu</a></i></b>','future'],
+            [37.7919419 ,-122.4210156, 'Bob’s Donut & Pastry Shop: <i><b><a href="http://www.yelp.com/biz/bobs-donut-and-pastry-shop-san-francisco-2">Yelp</a></i> · <a href="http://www.bobsdonutssf.com/menu/"><i>Menu</a></i></b>','future'],
+            [37.753093,-122.407673, 'Dynamo Donut + Coffee: <i><b><a href="http://www.yelp.com/biz/dynamo-donut-coffee-san-francisco-2?page_src=related_bizes">Yelp</a></i> · <a href="https://kudos.tc/om/dynamotwoday"><i>Menu</a></i></b>','future'],
+            [37.764270 ,-122.430571, 'Ike\'s Place: <i><b><a href="http://www.yelp.com/biz/ikes-place-san-francisco">Yelp</a></i> · <a href="http://ilikeikesplace.com"><i>Menu</a></i></b>','future'],
+            [37.759487 ,-122.419443, 'Little Heaven Deli: <i><b><a href="http://www.yelp.com/biz/little-heaven-deli-san-francisco">Yelp</a></i> ','future'],
         ]);
 
         var options = {
             mapType: 'styledMap',
             zoomLevel: 12,
-            showTip: true,
+            showTip: false,
             useMapTypeControl: true,
             maps: {
               // Your custom mapTypeId holding custom map styles.
