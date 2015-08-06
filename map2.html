@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Our favorite places</title>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  #map { position:relative; height: 500px; width:100%; }
+  .popupimage { width: 200px; margin: auto; padding: 10px;}
+</style>
+</head>
+<body>
+<style>
+ body {
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        line-height:20px;
+        background-color: #ededed;
+        background-repeat: repeat-y;
+      }
+
+.menu-ui {
+  background:#fff;
+  position:absolute;
+  top:10px;right:10px;
+  z-index:1;
+  border-radius:3px;
+  width:120px;
+  border:1px solid rgba(0,0,0,0.4);
+  }
+  .menu-ui a {
+    font-size:13px;
+    color:#404040;
+    display:block;
+    margin:0;padding:0;
+    padding:10px;
+    text-decoration:none;
+    border-bottom:1px solid rgba(0,0,0,0.25);
+    text-align:center;
+    }
+    .menu-ui a:first-child {
+      border-radius:3px 3px 0 0;
+      }
+    .menu-ui a:last-child {
+      border:none;
+      border-radius:0 0 3px 3px;
+      }
+    .menu-ui a:hover {
+      background:#f8f8f8;
+      color:#404040;
+      }
+    .menu-ui a.active,
+    .menu-ui a.active:hover {
+      background:#d23f6f;
+      color:#FFF;
+      }
+</style>
+
+<!-- jQuery is required for this example. -->
+<script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+
+<nav class='menu-ui'>
+  <a href='#' class='active' data-filter='all'>Show all</a>
+  <a href='#' data-filter='food'>Food</a>
+  <a href='#' data-filter='dessert'>Dessert</a>
+  <a href='#' data-filter='entertainment'>Entertainment</a>
+  <a href='#' data-filter='past'>Past</a>
+  <a href='#' data-filter='future'>Future</a>
+</nav>
+
+<div id='map'></div>
+
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoiamVmZnN0ZXJuIiwiYSI6IlAzRFFiN0EifQ.mNWvayrLEw9wULuq0sopyA';
+// In the propeties object for each marker define key's
+// like `rentals`, `fuel`, `tackleshop` that are set to true for false
+// depending on whether or they exist at a location.
+var geojson = [
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -122.160708,
+          37.445444
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b>Timothy Adams</b>",
+        "city":"Palo Alto",
+        "food": false,
+        "dessert": true,
+        "entertainment": false,
+        "past": true,
+        "future": false,
+        "marker-color": "#d23f6f",
+        "marker-size": "large",
+        "marker-symbol": "ice-cream"
+      }
+    },
+       {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -74.435720443726,
+          39.353812390495
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b>Marina #1</b>",
+        "description": "<center>★★★★★</center>",
+        "food": true,
+        "dessert": false,
+        "entertainment": false,
+        "past": true,
+        "future": false,
+        "marker-color": "#d23f6f",
+        "marker-size": "large",
+        "marker-symbol": "fast-food"
+      }
+    },
+       {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -122.080963,
+            37.414622,
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b>Century Cinema 16</b>",
+        "description": "<center>★★★★★</center>",
+        "city":"Mountain View",
+        "food": false,
+        "dessert": false,
+        "entertainment": true,
+        "past": true,
+        "future": false,
+        "marker-color": "#d23f6f",
+        "marker-size": "large",
+        "marker-symbol": "cinema"
+      }
+    },
+       {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -122.135093,
+          37.419110
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b>Driftwood Deli</b>",
+        "city":"Palo Alto",
+        "description":'Driftwood Deli: <b><i><a href="http://www.yelp.com/biz/driftwood-deli-and-market-palo-alto">Yelp</a></i></b> · <b><i><a href="http://www.driftwooddeliandmarket.com/menu.html">Menu</a></i></b>',
+        "food": true,
+        "dessert": false,
+        "entertainment": false,
+        "past": true,
+        "future": false,
+        "marker-color": "#d23f6f",
+        "marker-size": "large",
+        "marker-symbol": "fast-food"
+      }
+    },
+        {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -122.135093,
+          37.419110
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b><center>Gelataio</center></b>",
+        "city":"Palo Alto",
+        "description":'<i><b><a href="http://www.yelp.com/biz/gelataio-palo-alto-3">Yelp</a></i> · <a href="http://gelataio.us"><i>Menu</a></i></b>',
+        "food": false,
+        "dessert": true,
+        "entertainment": false,
+        "past": true,
+        "future": false,
+        "marker-color": "#d23f6f",
+        "marker-size": "large",
+        "marker-symbol": "ice-cream"
+      }
+    },
+            {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+           -122.027284,
+          37.362242
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b>Bon Chon Chicken</b>",
+        "city":"Palo Alto",
+        "description":'<center><i><b><a href="http://www.yelp.com/biz/bon-chon-chicken-sunnyvale-2?osq=bonchon+chicken">Yelp</a></i> · <a href="http://www.bonchonbayarea.com/BCMenu080614.pdf"><i>Menu</a></i></b></center>',
+        "food": true,
+        "dessert": false,
+        "entertainment": false,
+        "past": true,
+        "future": false,
+        "marker-color": "#d23f6f",
+        "marker-size": "large",
+        "marker-symbol": "fast-food"
+      }
+    },
+            {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+        -122.129482,37.433227
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b>Coupa Café</b>",
+        "city":"Palo Alto",
+        "description":'<i><b><a href="http://www.yelp.com/biz/coupa-café-palo-alto-3">Yelp</a></i> · <a href="http://www.coupacafe.com/wp-content/uploads/2012/03/Menu-07242014.pdf"><i>Menu</a></i></b>',
+        "food": true,
+        "dessert": false,
+        "entertainment": false,
+        "past": true,
+        "future": false,
+        "marker-color": "#d23f6f",
+        "marker-size": "large",
+        "marker-symbol": "fast-food"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+         -122.160992,
+          37.410218
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b><center>The Dish</center></b>",
+        "description":"yeah man",
+        "city":"Palo Alto",
+        "food": true,
+        "dessert": false,
+        "entertainment": false,
+        "past": true,
+        "future": false,
+        "marker-color": "#d23f6f",
+        "marker-size": "large",
+        "marker-symbol": "park"
+      }
+    },
+        {
+          "type": "Feature",
+      "geometry": {
+        "coordinates": [
+         -122.144826,
+          37.425940
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b><center>Mediterranean Wraps</center></b>",
+        "description":"yeah man",
+        "city":"Palo Alto",
+        "food": true,
+        "dessert": false,
+        "entertainment": false,
+        "past": false,
+        "future": true,
+        "marker-color": "#f6bf01",
+        "marker-size": "large",
+        "marker-symbol": "fast-food"
+      }
+    },
+    {
+    "type": "Feature",
+      "geometry": {
+        "coordinates": [
+        -122.405193,
+          37.787609
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b>Tommy\'s Joint</b>",
+        "description": '<center><i><b><a href="http://www.yelp.com/biz/tommys-joynt-san-francisco">Yelp</a></i> · <a href="http://www.netbaan.com/tommysjoynt/menu2.html"><i>Menu</a></i></b></center>',
+        "city":"San Francisco",
+        "food": true,
+        "dessert": false,
+        "entertainment": false,
+        "past": false,
+        "future": true,
+        "marker-color": "#f6bf01",
+        "marker-size": "large",
+        "marker-symbol": "fast-food"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+        -122.403420,
+        37.784733
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b>Super Duper Burger</b>",
+        "description":'<center><i><b><a href="http://www.yelp.com/biz/super-duper-burgers-san-francisco-6">Yelp</a></i> · <a href="http://superduperburgers.com"><i>Menu</a></i></b></center>',
+        "city":"San Francisco",
+        "food": true,
+        "dessert": false,
+        "entertainment": false,
+        "past": false,
+        "future": true,
+        "marker-color": "#f6bf01",
+        "marker-size": "large",
+        "marker-symbol": "fast-food"
+      }
+    }
+]; 
+
+
+
+var map = L.mapbox.map('map', 'examples.map-20v6611k')
+    .setView([37.410218, -122.160992], 12)
+
+
+var markers = L.mapbox.featureLayer()
+    .setGeoJSON(geojson)
+    .addTo(map);
+
+$('.menu-ui a').on('click', function() {
+    // For each filter link, get the 'data-filter' attribute value.
+    var filter = $(this).data('filter');
+    $(this).addClass('active').siblings().removeClass('active');
+    markers.setFilter(function(f) {
+        // If the data-filter attribute is set to "all", return
+        // all (true). Otherwise, filter on markers that have
+        // a value set to true based on the filter name.
+        return (filter === 'all') ? true : f.properties[filter] === true;
+    });
+    return false;
+});
+</script>
+ 
+
+</body>
+</html>

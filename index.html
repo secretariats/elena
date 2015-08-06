@@ -31,10 +31,18 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  #map { position:relative; height: 500px; width:100%; }
+  .popupimage { width: 200px; margin: auto; padding: 10px;}
+</style>
+
+
 </head>
 
-<body id="page-top">
-
+ 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -487,7 +495,7 @@
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
                             <h2>Yosemite</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                            <p class="item-intro text-muted">Let's go see El Capitan.</p>
                             <img class="img-responsive img-centered" src="img/recipes/yosemite4.png" alt="">
                              <p>I haven't been here since TEAM, and I can guarantee it would be a lot more fun with you than with my freshman year group.</p>
                             <p>
@@ -543,7 +551,7 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <h2><a href="http://www.midnightmunchiesbakery.com/index.html">San Francisco</a></h2>
+                            <h2>San Francisco</h2>
                             <p class="item-intro text-muted">We can stick to the non-sketchy parts, I promise.</p>
                             <img class="img-responsive img-centered" src="img/recipes/sf2.png" alt="">
                             <p>I know it's not your favorite city, but if you haven't reached a saturation point yet I feel like I've never lived the tourist experience!
@@ -552,7 +560,7 @@
                             <p><a href="http://www.yelp.com/biz/tommys-joynt-san-francisco"><b>Tommy's Joynt</b></a>: Roast beef, beef brisket, salmon, mashed potatoes, green beans... all of my ultimate comfort food. This is the place I've been searching for my whole life. <a href="http://www.netbaan.com/tommysjoynt/menu2.html">(Menu)</a> 
                             <p>
                             Then let's grab an Ike's and go for a walk:
-                            <p><a href="http://www.yelp.com/biz/crissy-field-san-francisco-2?osq=views"><b>Crissy Field</b></a> | <a href="http://www.yelp.com/biz/twin-peaks-san-francisco"><b>Twin Peaks</b></a> | <a href="http://www.yelp.com/biz/fort-point-san-francisco">Fort Point</a> | <b><a href="http://www.yelp.com/biz/lands-end-trail-san-francisco?page_src=related_bizes">Land's End Trail</a></b> | <b><a href="http://www.yelp.com/biz/strawberry-hill-san-francisco?page_src=related_bizes">Strawberry Hill</b></a> | <b><a href="http://www.yelp.com/biz/the-16th-avenue-tiled-steps-project-san-francisco">The 16th Avenue Tiled Steps Project</a></b></p>
+                            <p><a href="http://www.yelp.com/biz/crissy-field-san-francisco-2?osq=views"><b>Crissy Field</b></a> | <a href="http://www.yelp.com/biz/twin-peaks-san-francisco"><b>Twin Peaks</b></a> | <a href="http://www.yelp.com/biz/fort-point-san-francisco"><b>Fort Point</b></a> | <b><a href="http://www.yelp.com/biz/lands-end-trail-san-francisco?page_src=related_bizes">Land's End Trail</a></b> | <b><a href="http://www.yelp.com/biz/strawberry-hill-san-francisco?page_src=related_bizes">Strawberry Hill</b></a> | <b><a href="http://www.yelp.com/biz/the-16th-avenue-tiled-steps-project-san-francisco">The 16th Avenue Tiled Steps Project</a></b></p>
                          <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
                         </div>
                     </div>
@@ -700,23 +708,31 @@
                 <div class="col-md-4">
                     <a href="#" data-toggle="modal" data-target="#fandangoModal"><span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-headphones fa-stack-1x fa-inverse"></i>
+                        <i class="fa fa-ticket fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading"> Fandango</a></h4>
                     <p class="text-muted">Because movies.</p>
                 </div>
                 <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <a href="https://www.dropbox.com/s/i4tzz9b7gy7e9v7/soulcycle.psd?dl=0"><i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-desktop fa-stack-1x fa-inverse"></i>
+                    <a href="#" data-toggle="modal" data-target="#psdModal"><span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-file-image-o fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">PSDs</h4></a>
                     <p class="text-muted">Obviously I'm still here for all your photoshop needs, but for the rare occasions when I'm not at my laptop!</p>
+
+<!-- 
+                    <span class="fa-stack fa-4x">
+                        <a href="https://www.dropbox.com/s/i4tzz9b7gy7e9v7/soulcycle.psd?dl=0"><i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-file-image-o fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">PSDs</h4></a>
+                    <p class="text-muted">Obviously I'm still here for all your photoshop needs, but for the rare occasions when I'm not at my laptop!</p> -->
                 </div>
                 <div class="col-md-4">
                     <a href="#" data-toggle="modal" data-target="#alfredModal"><span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-file-video-o fa-stack-1x  fa-inverse"></i>
+                        <i class="fa fa-laptop fa-stack-1x  fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Alfred</h4></a>
                     <p class="text-muted">I don't know if you've already purchased this... if you have, gift it to a friend and increase their quality of life by 100%</p></div>
@@ -762,8 +778,26 @@
           </div>
         </div>
 
+        <!-- PSD !-->
+        <div class="goodies-modal modal fade" id="psdModal" tabindex="-1" role="dialog" aria-labelledby="psdModal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">PSDs</h4>
+              </div>
+              <div class="modal-body">
+                <h3><a href="https://www.dropbox.com/s/i4tzz9b7gy7e9v7/soulcycle.psd?dl=0"><img src="img/recipes/psd.png"></a></h3>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- ALFRED !-->
-        <div class="goodies-modal modal fade" id="alfredModal" tabindex="-1" role="dialog" aria-labelledby="fandangoModal" aria-hidden="true">
+        <div class="goodies-modal modal fade" id="alfredModal" tabindex="-1" role="dialog" aria-labelledby="alfredModal" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -890,6 +924,302 @@
         </div>
  
   -->
+  <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+
+<nav class='menu-ui'>
+  <a href='#' class='active' data-filter='all'><b>Show all</b></a>
+  <a href='#' data-filter='food'>Food</a>
+  <a href='#' data-filter='dessert'>Dessert</a>
+  <a href='#' data-filter='entertainment'>Entertainment</a>
+  <a href='#' data-filter='past'>Past</a>
+  <a href='#' data-filter='future'>Future</a>
+</nav>
+
+
+<div id='map'></div>
+
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoiamVmZnN0ZXJuIiwiYSI6IlAzRFFiN0EifQ.mNWvayrLEw9wULuq0sopyA';
+// In the propeties object for each marker define key's
+// like `rentals`, `fuel`, `tackleshop` that are set to true for false
+// depending on whether or they exist at a location.
+var geojson = [
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -122.160708,
+          37.445444
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b>Timothy Adams</b>",
+        "city":"Palo Alto",
+        "food": false,
+        "dessert": true,
+        "entertainment": false,
+        "past": true,
+        "future": false,
+        "marker-color": "#d23f6f",
+        "marker-size": "large",
+        "marker-symbol": "ice-cream"
+      }
+    },
+       {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -74.435720443726,
+          39.353812390495
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b>Marina #1</b>",
+        "description": "<center>★★★★★</center>",
+        "food": true,
+        "dessert": false,
+        "entertainment": false,
+        "past": true,
+        "future": false,
+        "marker-color": "#d23f6f",
+        "marker-size": "large",
+        "marker-symbol": "fast-food"
+      }
+    },
+       {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -122.080963,
+            37.414622,
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b>Century Cinema 16</b>",
+        "description": "<center>★★★★★</center>",
+        "city":"Mountain View",
+        "food": false,
+        "dessert": false,
+        "entertainment": true,
+        "past": true,
+        "future": false,
+        "marker-color": "#d23f6f",
+        "marker-size": "large",
+        "marker-symbol": "cinema"
+      }
+    },
+       {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -122.135093,
+          37.419110
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b>Driftwood Deli</b>",
+        "city":"Palo Alto",
+        "description":'Driftwood Deli: <b><i><a href="http://www.yelp.com/biz/driftwood-deli-and-market-palo-alto">Yelp</a></i></b> · <b><i><a href="http://www.driftwooddeliandmarket.com/menu.html">Menu</a></i></b>',
+        "food": true,
+        "dessert": false,
+        "entertainment": false,
+        "past": true,
+        "future": false,
+        "marker-color": "#d23f6f",
+        "marker-size": "large",
+        "marker-symbol": "fast-food"
+      }
+    },
+        {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          -122.135093,
+          37.419110
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b><center>Gelataio</center></b>",
+        "city":"Palo Alto",
+        "description":'<i><b><a href="http://www.yelp.com/biz/gelataio-palo-alto-3">Yelp</a></i> · <a href="http://gelataio.us"><i>Menu</a></i></b>',
+        "food": false,
+        "dessert": true,
+        "entertainment": false,
+        "past": true,
+        "future": false,
+        "marker-color": "#d23f6f",
+        "marker-size": "large",
+        "marker-symbol": "ice-cream"
+      }
+    },
+            {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+           -122.027284,
+          37.362242
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b>Bon Chon Chicken</b>",
+        "city":"Palo Alto",
+        "description":'<center><i><b><a href="http://www.yelp.com/biz/bon-chon-chicken-sunnyvale-2?osq=bonchon+chicken">Yelp</a></i> · <a href="http://www.bonchonbayarea.com/BCMenu080614.pdf"><i>Menu</a></i></b></center>',
+        "food": true,
+        "dessert": false,
+        "entertainment": false,
+        "past": true,
+        "future": false,
+        "marker-color": "#d23f6f",
+        "marker-size": "large",
+        "marker-symbol": "fast-food"
+      }
+    },
+            {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+        -122.129482,37.433227
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b>Coupa Café</b>",
+        "city":"Palo Alto",
+        "description":'<i><b><a href="http://www.yelp.com/biz/coupa-café-palo-alto-3">Yelp</a></i> · <a href="http://www.coupacafe.com/wp-content/uploads/2012/03/Menu-07242014.pdf"><i>Menu</a></i></b>',
+        "food": true,
+        "dessert": false,
+        "entertainment": false,
+        "past": true,
+        "future": false,
+        "marker-color": "#d23f6f",
+        "marker-size": "large",
+        "marker-symbol": "fast-food"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+         -122.160992,
+          37.410218
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b><center>The Dish</center></b>",
+        "description":"yeah man",
+        "city":"Palo Alto",
+        "food": true,
+        "dessert": false,
+        "entertainment": false,
+        "past": true,
+        "future": false,
+        "marker-color": "#d23f6f",
+        "marker-size": "large",
+        "marker-symbol": "park"
+      }
+    },
+        {
+          "type": "Feature",
+      "geometry": {
+        "coordinates": [
+         -122.144826,
+          37.425940
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b><center>Mediterranean Wraps</center></b>",
+        "description":"yeah man",
+        "city":"Palo Alto",
+        "food": true,
+        "dessert": false,
+        "entertainment": false,
+        "past": false,
+        "future": true,
+        "marker-color": "#f6bf01",
+        "marker-size": "large",
+        "marker-symbol": "fast-food"
+      }
+    },
+    {
+    "type": "Feature",
+      "geometry": {
+        "coordinates": [
+        -122.405193,
+          37.787609
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b>Tommy\'s Joint</b>",
+        "description": '<center><i><b><a href="http://www.yelp.com/biz/tommys-joynt-san-francisco">Yelp</a></i> · <a href="http://www.netbaan.com/tommysjoynt/menu2.html"><i>Menu</a></i></b></center>',
+        "city":"San Francisco",
+        "food": true,
+        "dessert": false,
+        "entertainment": false,
+        "past": false,
+        "future": true,
+        "marker-color": "#f6bf01",
+        "marker-size": "large",
+        "marker-symbol": "fast-food"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+        -122.403420,
+        37.784733
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b>Super Duper Burger</b>",
+        "description":'<center><i><b><a href="http://www.yelp.com/biz/super-duper-burgers-san-francisco-6">Yelp</a></i> · <a href="http://superduperburgers.com"><i>Menu</a></i></b></center>',
+        "city":"San Francisco",
+        "food": true,
+        "dessert": false,
+        "entertainment": false,
+        "past": false,
+        "future": true,
+        "marker-color": "#f6bf01",
+        "marker-size": "large",
+        "marker-symbol": "fast-food"
+      }
+    }
+]; 
+
+
+
+var map = L.mapbox.map('map', 'examples.map-20v6611k')
+    .setView([37.410218, -122.160992], 12)
+
+
+var markers = L.mapbox.featureLayer()
+    .setGeoJSON(geojson)
+    .addTo(map);
+
+$('.menu-ui a').on('click', function() {
+    // For each filter link, get the 'data-filter' attribute value.
+    var filter = $(this).data('filter');
+    $(this).addClass('active').siblings().removeClass('active');
+    markers.setFilter(function(f) {
+        // If the data-filter attribute is set to "all", return
+        // all (true). Otherwise, filter on markers that have
+        // a value set to true based on the filter name.
+        return (filter === 'all') ? true : f.properties[filter] === true;
+    });
+    return false;
+});
+</script>
+ 
  
  <head>
     <style>
@@ -903,7 +1233,7 @@
            left: 28%; /* chartArea left */
     }
    </style>
-
+<!-- 
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["map"]});
@@ -987,9 +1317,9 @@
       }
 
     </script>
-  </head>
+  </head> -->
 
-  <body>
+<!--   <body>
     <section2 id="map">
       <div class="chartWithOverlay">
         <div id="map_div" style="height: 500px; width: 100%"></div>
@@ -998,7 +1328,7 @@
      </div>
   </section>
   </body>
-
+ -->
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
