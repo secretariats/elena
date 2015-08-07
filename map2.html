@@ -1,362 +1,217 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset=utf-8 />
-<title>Our favorite places</title>
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
-<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
-<style>
-  body { margin:0; padding:0; }
-  #map { position:relative; height: 500px; width:100%; }
-  .popupimage { width: 200px; margin: auto; padding: 10px;}
-</style>
-</head>
-<body>
-<style>
- body {
-        font-family: 'Roboto', sans-serif;
-        font-size: 18px;
-        line-height:20px;
-        background-color: #ededed;
-        background-repeat: repeat-y;
-      }
+ 
+ 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-.menu-ui {
-  background:#fff;
-  position:absolute;
-  top:10px;right:10px;
-  z-index:1;
-  border-radius:3px;
-  width:120px;
-  border:1px solid rgba(0,0,0,0.4);
-  }
-  .menu-ui a {
-    font-size:13px;
-    color:#404040;
-    display:block;
-    margin:0;padding:0;
-    padding:10px;
-    text-decoration:none;
-    border-bottom:1px solid rgba(0,0,0,0.25);
-    text-align:center;
-    }
-    .menu-ui a:first-child {
-      border-radius:3px 3px 0 0;
-      }
-    .menu-ui a:last-child {
-      border:none;
-      border-radius:0 0 3px 3px;
-      }
-    .menu-ui a:hover {
-      background:#f8f8f8;
-      color:#404040;
-      }
-    .menu-ui a.active,
-    .menu-ui a.active:hover {
-      background:#d23f6f;
-      color:#FFF;
-      }
-</style>
+    <title>Happy Birthday!</title>
 
-<!-- jQuery is required for this example. -->
-<script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-<nav class='menu-ui'>
-  <a href='#' class='active' data-filter='all'>Show all</a>
-  <a href='#' data-filter='food'>Food</a>
-  <a href='#' data-filter='dessert'>Dessert</a>
-  <a href='#' data-filter='entertainment'>Entertainment</a>
-  <a href='#' data-filter='past'>Past</a>
-  <a href='#' data-filter='future'>Future</a>
-</nav>
+    <!-- Custom CSS -->
+    <link href="css/elena.css" rel="stylesheet">
 
-<div id='map'></div>
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+     
+
+         <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+      <script src="http://code.highcharts.com/modules/exporting.js"></script>
+        <div id="tasteChart" style="height: 300px"></div>        
 
 <script>
-L.mapbox.accessToken = 'pk.eyJ1IjoiamVmZnN0ZXJuIiwiYSI6IlAzRFFiN0EifQ.mNWvayrLEw9wULuq0sopyA';
-// In the propeties object for each marker define key's
-// like `rentals`, `fuel`, `tackleshop` that are set to true for false
-// depending on whether or they exist at a location.
-var geojson = [
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          -122.160708,
-          37.445444
-        ],
-        "type": "Point"
-      },
-      "properties": {
-        "title": "<b>Timothy Adams</b>",
-        "city":"Palo Alto",
-        "food": false,
-        "dessert": true,
-        "entertainment": false,
-        "past": true,
-        "future": false,
-        "marker-color": "#d23f6f",
-        "marker-size": "large",
-        "marker-symbol": "ice-cream"
-      }
-    },
-       {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          -74.435720443726,
-          39.353812390495
-        ],
-        "type": "Point"
-      },
-      "properties": {
-        "title": "<b>Marina #1</b>",
-        "description": "<center>★★★★★</center>",
-        "food": true,
-        "dessert": false,
-        "entertainment": false,
-        "past": true,
-        "future": false,
-        "marker-color": "#d23f6f",
-        "marker-size": "large",
-        "marker-symbol": "fast-food"
-      }
-    },
-       {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          -122.080963,
-            37.414622,
-        ],
-        "type": "Point"
-      },
-      "properties": {
-        "title": "<b>Century Cinema 16</b>",
-        "description": "<center>★★★★★</center>",
-        "city":"Mountain View",
-        "food": false,
-        "dessert": false,
-        "entertainment": true,
-        "past": true,
-        "future": false,
-        "marker-color": "#d23f6f",
-        "marker-size": "large",
-        "marker-symbol": "cinema"
-      }
-    },
-       {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          -122.135093,
-          37.419110
-        ],
-        "type": "Point"
-      },
-      "properties": {
-        "title": "<b>Driftwood Deli</b>",
-        "city":"Palo Alto",
-        "description":'Driftwood Deli: <b><i><a href="http://www.yelp.com/biz/driftwood-deli-and-market-palo-alto">Yelp</a></i></b> · <b><i><a href="http://www.driftwooddeliandmarket.com/menu.html">Menu</a></i></b>',
-        "food": true,
-        "dessert": false,
-        "entertainment": false,
-        "past": true,
-        "future": false,
-        "marker-color": "#d23f6f",
-        "marker-size": "large",
-        "marker-symbol": "fast-food"
-      }
-    },
-        {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-          -122.135093,
-          37.419110
-        ],
-        "type": "Point"
-      },
-      "properties": {
-        "title": "<b><center>Gelataio</center></b>",
-        "city":"Palo Alto",
-        "description":'<i><b><a href="http://www.yelp.com/biz/gelataio-palo-alto-3">Yelp</a></i> · <a href="http://gelataio.us"><i>Menu</a></i></b>',
-        "food": false,
-        "dessert": true,
-        "entertainment": false,
-        "past": true,
-        "future": false,
-        "marker-color": "#d23f6f",
-        "marker-size": "large",
-        "marker-symbol": "ice-cream"
-      }
-    },
-            {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-           -122.027284,
-          37.362242
-        ],
-        "type": "Point"
-      },
-      "properties": {
-        "title": "<b>Bon Chon Chicken</b>",
-        "city":"Palo Alto",
-        "description":'<center><i><b><a href="http://www.yelp.com/biz/bon-chon-chicken-sunnyvale-2?osq=bonchon+chicken">Yelp</a></i> · <a href="http://www.bonchonbayarea.com/BCMenu080614.pdf"><i>Menu</a></i></b></center>',
-        "food": true,
-        "dessert": false,
-        "entertainment": false,
-        "past": true,
-        "future": false,
-        "marker-color": "#d23f6f",
-        "marker-size": "large",
-        "marker-symbol": "fast-food"
-      }
-    },
-            {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-        -122.129482,37.433227
-        ],
-        "type": "Point"
-      },
-      "properties": {
-        "title": "<b>Coupa Café</b>",
-        "city":"Palo Alto",
-        "description":'<i><b><a href="http://www.yelp.com/biz/coupa-café-palo-alto-3">Yelp</a></i> · <a href="http://www.coupacafe.com/wp-content/uploads/2012/03/Menu-07242014.pdf"><i>Menu</a></i></b>',
-        "food": true,
-        "dessert": false,
-        "entertainment": false,
-        "past": true,
-        "future": false,
-        "marker-color": "#d23f6f",
-        "marker-size": "large",
-        "marker-symbol": "fast-food"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-         -122.160992,
-          37.410218
-        ],
-        "type": "Point"
-      },
-      "properties": {
-        "title": "<b><center>The Dish</center></b>",
-        "description":"yeah man",
-        "city":"Palo Alto",
-        "food": true,
-        "dessert": false,
-        "entertainment": false,
-        "past": true,
-        "future": false,
-        "marker-color": "#d23f6f",
-        "marker-size": "large",
-        "marker-symbol": "park"
-      }
-    },
-        {
-          "type": "Feature",
-      "geometry": {
-        "coordinates": [
-         -122.144826,
-          37.425940
-        ],
-        "type": "Point"
-      },
-      "properties": {
-        "title": "<b><center>Mediterranean Wraps</center></b>",
-        "description":"yeah man",
-        "city":"Palo Alto",
-        "food": true,
-        "dessert": false,
-        "entertainment": false,
-        "past": false,
-        "future": true,
-        "marker-color": "#f6bf01",
-        "marker-size": "large",
-        "marker-symbol": "fast-food"
-      }
-    },
-    {
-    "type": "Feature",
-      "geometry": {
-        "coordinates": [
-        -122.405193,
-          37.787609
-        ],
-        "type": "Point"
-      },
-      "properties": {
-        "title": "<b>Tommy\'s Joint</b>",
-        "description": '<center><i><b><a href="http://www.yelp.com/biz/tommys-joynt-san-francisco">Yelp</a></i> · <a href="http://www.netbaan.com/tommysjoynt/menu2.html"><i>Menu</a></i></b></center>',
-        "city":"San Francisco",
-        "food": true,
-        "dessert": false,
-        "entertainment": false,
-        "past": false,
-        "future": true,
-        "marker-color": "#f6bf01",
-        "marker-size": "large",
-        "marker-symbol": "fast-food"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "coordinates": [
-        -122.403420,
-        37.784733
-        ],
-        "type": "Point"
-      },
-      "properties": {
-        "title": "<b>Super Duper Burger</b>",
-        "description":'<center><i><b><a href="http://www.yelp.com/biz/super-duper-burgers-san-francisco-6">Yelp</a></i> · <a href="http://superduperburgers.com"><i>Menu</a></i></b></center>',
-        "city":"San Francisco",
-        "food": true,
-        "dessert": false,
-        "entertainment": false,
-        "past": false,
-        "future": true,
-        "marker-color": "#f6bf01",
-        "marker-size": "large",
-        "marker-symbol": "fast-food"
-      }
-    }
-]; 
+ 
+      $(function () {
+    $('#tasteChart').highcharts({
+        chart: {
+            type: 'scatter',
+            zoomType: 'xy'
+        },
+        title: {
+            text: 'Our Ratings'
+        },
+        subtitle: {
+            text: 'Just for fun! I\'m not an elitist, nothing wrong with low RT reviews :]'
+        },
+        xAxis: {
+            title: {
+                enabled: true,
+                text: 'Our Average Rating'
+            },
+            startOnTick: true,
+            endOnTick: true,
+            showLastLabel: true
+        },
+        yAxis: {
+            title: {
+                text: 'RottenTomatoes'
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'left',
+            verticalAlign: 'top',
+            x: 100,
+            y: 70,
+            floating: true,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
+            borderWidth: 1
+        },
+        plotOptions: {
+            scatter: {
+                marker: {
+                    radius: 5,
+                    states: {
+                        hover: {
+                            enabled: true,
+                            lineColor: 'rgb(100,100,100)'
+                        }
+                    }
+                },
+                states: {
+                    hover: {
+                        marker: {
+                            enabled: false
+                        }
+                    }
+                },
 
-
-
-var map = L.mapbox.map('map', 'examples.map-20v6611k')
-    .setView([37.410218, -122.160992], 12)
-
-
-var markers = L.mapbox.featureLayer()
-    .setGeoJSON(geojson)
-    .addTo(map);
-
-$('.menu-ui a').on('click', function() {
-    // For each filter link, get the 'data-filter' attribute value.
-    var filter = $(this).data('filter');
-    $(this).addClass('active').siblings().removeClass('active');
-    markers.setFilter(function(f) {
-        // If the data-filter attribute is set to "all", return
-        // all (true). Otherwise, filter on markers that have
-        // a value set to true based on the filter name.
-        return (filter === 'all') ? true : f.properties[filter] === true;
+            }
+        },
+        exporting: { enabled: false } ,
+        tooltip: {
+            formatter: function () {
+                return ' <b>' + this.point.title + '</b><br>Critics: ' + this.point.y + " %<br>Us: " + this.point.x;
+            }
+        },
+        series: [{
+            name: 'Elena',
+            color: 'rgba(223, 83, 83, .5)',
+            data: [{
+                y: 71,
+                x: 3.25,
+                title: 'The Voices'
+            }, {
+                y: 8,
+                x: 0.75,
+                title: 'The Best of Me'
+            }, {
+                y: 91,
+                x: 3.75,
+                title: 'The Departed'
+            }, {
+                y: 72,
+                x: 3.5,
+                title: 'The Butler'
+            }, {
+                y: 10,
+                x: 1.75,
+                title: 'The Boy Next Door'
+            }, {
+                y: 93,
+                x: 3.75,
+                title: 'Speed'
+            }, {
+                y: 70,
+                x: 3,
+                title: 'Liberal Arts'
+            }, {
+                y: 34,
+                x: 2.75,
+                title: 'Two Night Stand'
+            }, {
+                y: 2,
+                x: 1,
+                title: 'The Getaway'
+            }]
+        }, {
+            name: 'Cecile',
+            color: 'rgba(119, 152, 191, .5)',
+            data: [{
+                y: 70,
+                x: 4.5,
+                title: 'About Time'
+            }, {
+                y: 93,
+                x: 3.5,
+                title: 'About a Boy'
+            }, {
+                y: 79,
+                x: 4,
+                title: 'We\'re the Millers'
+            }, {
+                y: 47,
+                x: 3.5,
+                title: 'McFarland, USA'
+            }, {
+                y: 72,
+                x: 3.5,
+                title: 'The DUFF'
+            }, {
+                y: 54,
+                x: 3.25,
+                title: 'Age of Adaline'
+            }, {
+                y: 70,
+                x: 3.75,
+                title: 'What If'
+            }, {
+                y: 94,
+                x: 3.25,
+                title: 'The Queen of Versailles'
+            }, {
+                y: 72,
+                x: 3.75,
+                title: 'Big Eyes'
+            }, {
+                y: 94,
+                x: 4.25,
+                title: 'Whiplash'
+            }, {
+                y: 92,
+                x: 4,
+                title: 'Ex Machina'
+            }, {
+                y: 81,
+                x: 3.25,
+                title: 'Beyond the Lights'
+            }, {
+                y: 90,
+                x: 3.25,
+                title: 'District 9'
+            }, {
+                y: 77,
+                x: 3.5,
+                title: 'St. Vincent'
+            }, {
+                y: 89,
+                x: 4,
+                title: 'Still Alice'
+            }, {
+                y: 62,
+                x: 3.75,
+                title: 'Changeling'
+            }, {
+                y: 52,
+                x: 4,
+                title: 'Spare Parts'
+            }, {
+                y: 77,
+                x: 3.75,
+                title: 'The Sisterhood of Traveling Pants'
+            }]
+        }]
     });
-    return false;
-});
+}); 
 </script>
  
-
-</body>
-</html>
+ 
