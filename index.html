@@ -43,7 +43,6 @@
 
 
 </head>
-
  
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -101,266 +100,25 @@
     </header>
  
     <!-- Message -->
-    <section id="message" class="bg-light-gray">
+    <section id="message">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Elena:</h2>
         <!--    <h3 class="section-subheading text-muted">Happy Birthday.</h3> -->                
         </div>
-       <!--  I feel like we consume so much media and make so many plans, we needed somewhere to compile them.
+       I feel like we consume so much media and make so many plans, we needed somewhere to compile them.
 
         <p>You wanna know a secret? I would pick you over any fictional character, every time.</p>
 
         <p>Even Claire.</p>
-        <p>P.S.: Unless you state your objection, when the month ends I'll probably replace Little Guy with a Samoyed... Just to keep things fresh, obviously.</p> -->
-         [sappy birthday card]
+        <p>P.S.: Unless you state your objection, when the month ends I'll probably replace Little Guy with a Samoyed... Just to keep things fresh, obviously.</p>  
 
 
         </div>
         </div>
     </section>
 
-
-    <!-- Media Section -->
-    <section id="media">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Media</h2>
-                    <h3 class="section-subheading text-muted">Because sometimes even I have trouble keeping track.</h3>
-                </div>
-            </div>
-
-            <div class="lessSpace"></div>
-            <center><button  class="btn btn-small btn-primary" data-toggle="modal" data-target="#mediaModal">View Suggestions</button></center><br>
-            <h3><iframe id="JotFormIFrame" onload="window.parent.scrollTo(0,0)" allowtransparency="true" src="http://form.jotform.us/form/52100428266144" frameborder="0" style="width:100%; border:none;" scrolling="no"></iframe><script type="text/javascript">window.handleIFrameMessage = function(e) {var args = e.data.split(":");var iframe = document.getElementById("JotFormIFrame");if (!iframe)return;switch (args[0]) {case "scrollIntoView":iframe.scrollIntoView();break;case "setHeight":iframe.style.height = args[1] + "px";break;case "collapseErrorPage":if (iframe.clientHeight > window.innerHeight) {iframe.style.height = window.innerHeight + "px";}break;case "reloadPage":window.location.reload();break;}};if (window.addEventListener) {window.addEventListener("message", handleIFrameMessage, false);} else if (window.attachEvent) {window.attachEvent("onmessage", handleIFrameMessage);}</script></h3> 
-                 </div>
-            </div>
-        </div>
-         <div class="lessSpace"></div>
-    </section>
-
-    <section id="taste" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Taste Tracker</h2>
-                    <h3 class="section-subheading text-muted">a.k.a., proof my taste is better.</h3>
-                </div>
-            </div>
- 
-        <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
-        <script src="http://code.highcharts.com/highcharts.js"></script>
-        <script src="http://code.highcharts.com/modules/exporting.js"></script>
-        <center><div id="tasteChart" style="height: 300px;width:80%"></div></center>      
-
-
-<script>
- 
-      $(function () {
-    $('#tasteChart').highcharts({
-        chart: {
-            type: 'scatter',
-            backgroundColor:'#f7f7f7' ,
-            zoomType: 'xy'
-        },
-        title: {
-            text: 'Our Ratings'
-        },
-        subtitle: {
-            text: 'Just for fun! I\'m not an elitist, nothing wrong with low RT reviews :]'
-        },
-        xAxis: {
-            title: {
-                enabled: true,
-                text: 'Our Average Rating'
-            },
-            startOnTick: true,
-            endOnTick: true,
-            showLastLabel: true
-        },
-        yAxis: {
-            title: {
-                text: 'RottenTomatoes'
-            }
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'left',
-            verticalAlign: 'top',
-            x: 100,
-            y: 70,
-            floating: true,
-            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
-            borderWidth: 1
-        },
-        plotOptions: {
-            scatter: {
-                marker: {
-                    radius: 5,
-                    states: {
-                        hover: {
-                            enabled: true,
-                            lineColor: 'rgb(100,100,100)'
-                        }
-                    }
-                },
-                states: {
-                    hover: {
-                        marker: {
-                            enabled: false
-                        }
-                    }
-                },
-
-            }
-        },
-        exporting: { enabled: false } ,
-        tooltip: {
-            formatter: function () {
-                return ' <b>' + this.point.title + '</b><br>Critics: ' + this.point.y + " %<br>Us: " + this.point.x;
-            }
-        },
-        series: [{
-            name: 'Elena',
-            color: 'rgba(223, 83, 83, .5)',
-            data: [{
-                y: 71,
-                x: 3.25,
-                title: 'The Voices'
-            }, {
-                y: 8,
-                x: 0.75,
-                title: 'The Best of Me'
-            }, {
-                y: 91,
-                x: 3.75,
-                title: 'The Departed'
-            }, {
-                y: 72,
-                x: 3.5,
-                title: 'The Butler'
-            }, {
-                y: 10,
-                x: 1.75,
-                title: 'The Boy Next Door'
-            }, {
-                y: 93,
-                x: 3.75,
-                title: 'Speed'
-            }, {
-                y: 70,
-                x: 3,
-                title: 'Liberal Arts'
-            }, {
-                y: 34,
-                x: 2.75,
-                title: 'Two Night Stand'
-            }, {
-                y: 2,
-                x: 1,
-                title: 'The Getaway'
-            }]
-        }, {
-            name: 'Cecile',
-            color: 'rgba(119, 152, 191, .5)',
-            data: [{
-                y: 70,
-                x: 4.5,
-                title: 'About Time'
-            }, {
-                y: 93,
-                x: 3.5,
-                title: 'About a Boy'
-            }, {
-                y: 79,
-                x: 4,
-                title: 'We\'re the Millers'
-            }, {
-                y: 47,
-                x: 3.5,
-                title: 'McFarland, USA'
-            }, {
-                y: 72,
-                x: 3.5,
-                title: 'The DUFF'
-            }, {
-                y: 54,
-                x: 3.25,
-                title: 'Age of Adaline'
-            }, {
-                y: 70,
-                x: 3.75,
-                title: 'What If'
-            }, {
-                y: 94,
-                x: 3.25,
-                title: 'The Queen of Versailles'
-            }, {
-                y: 72,
-                x: 3.75,
-                title: 'Big Eyes'
-            }, {
-                y: 94,
-                x: 4.25,
-                title: 'Whiplash'
-            }, {
-                y: 92,
-                x: 4,
-                title: 'Ex Machina'
-            }, {
-                y: 81,
-                x: 3.25,
-                title: 'Beyond the Lights'
-            }, {
-                y: 90,
-                x: 3.25,
-                title: 'District 9'
-            }, {
-                y: 77,
-                x: 3.5,
-                title: 'St. Vincent'
-            }, {
-                y: 89,
-                x: 4,
-                title: 'Still Alice'
-            }, {
-                y: 62,
-                x: 3.75,
-                title: 'Changeling'
-            }, {
-                y: 52,
-                x: 4,
-                title: 'Spare Parts'
-            }, {
-                y: 77,
-                x: 3.75,
-                title: 'The Sisterhood of Traveling Pants'
-            }]
-        }]
-    });
-}); 
-</script>
- 
- 
-      
-    </section>
-
-    <!-- TV Calendar Section -->
-    <section id="calendar">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Calendar</h2>
-                    <h3 class="section-subheading text-muted">I don't need a fancy planner.</h3>
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="calendar" style="text-align:center">
-<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=v0i48u54q3bte02ccm3iisdo9k%40group.calendar.google.com&amp;color=%23B1440E&amp;src=5hku99i9nbt1hi8vv5coov6mhipts25e%40import.calendar.google.com&amp;color=%23B1365F&amp;src=3cnijnt06pa0qf5arv8vemlouo%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="90%" height="600" frameborder="0" scrolling="no"></iframe>   </section>
 
    <!-- bucketlist Grid Section -->
     <section id="recipes" class="bg-light-gray">
@@ -422,11 +180,11 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/recipes/ccc.png"  class="img-responsive" alt="">
+                        <img src="img/recipes/tilden.png"  class="img-responsive" alt="">
                     </a>
                     <div class="recipes-caption">
-                        <h4>Cookies</h4>
-                        <p class="text-muted">Dessert</p>
+                        <h4>Tilden Park</h4>
+                        <p class="text-muted">Hiking</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 recipes-item">
@@ -582,6 +340,38 @@
         </div>
     </div>
 
+    <!-- recipes Modal 4; Tilden Park -->
+    <div class="recipes-modal modal fade" id="recipesModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2><a href="http://www.yelp.com/biz/tilden-regional-park-berkeley-2">Tilden Park</a></h2>
+                            <p class="item-intro text-muted">We can stick to the non-sketchy parts, I promise.</p>
+                            <img class="img-responsive img-centered" src="img/recipes/grizzly2.png" alt="">
+                            <p>I know it's not your favorite city, but if you haven't reached a saturation point yet I feel like I've never lived the tourist experience!
+                            <p><a href="http://www.yelp.com/biz/la-taqueria-san-francisco-2?start=80"><b>La Taqueria</b></a>: Fivethirtyeight voted this <a href="http://fivethirtyeight.com/burrito/#brackets-view">America's Best Burrito</a>!</p>
+
+                            <p><a href="http://www.yelp.com/biz/tommys-joynt-san-francisco"><b>Tommy's Joynt</b></a>: Roast beef, beef brisket, salmon, mashed potatoes, green beans... all of my ultimate comfort food. This is the place I've been searching for my whole life. <a href="http://www.netbaan.com/tommysjoynt/menu2.html">(Menu)</a> 
+                            <p>
+                            Then let's grab an Ike's and go for a walk:
+                            <p><a href="http://www.yelp.com/biz/grizzly-peak-berkeley-2"><b>Grizzly Peak</b></p>
+                         <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- recipes Modal 5; EGG NESTS -->
     <div class="recipes-modal modal fade" id="recipesModal5" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
@@ -708,6 +498,384 @@
         </div>
     </div>
 
+
+        <!-- TV Calendar Section -->
+    <section id="calendar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Calendar</h2>
+                    <h3 class="section-subheading text-muted">I don't need a fancy planner.</h3>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="calendar" style="text-align:center">
+<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=v0i48u54q3bte02ccm3iisdo9k%40group.calendar.google.com&amp;color=%23B1440E&amp;src=5hku99i9nbt1hi8vv5coov6mhipts25e%40import.calendar.google.com&amp;color=%23B1365F&amp;src=3cnijnt06pa0qf5arv8vemlouo%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="90%" height="600" frameborder="0" scrolling="no"></iframe>   </section>
+
+
+
+
+<!--TASTE CHART !-->
+    <section id="taste" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Taste Tracker</h2>
+                    <h3 class="section-subheading text-muted">a.k.a., proof my taste is better.</h3>
+                </div>
+            </div>
+ 
+        <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="http://code.highcharts.com/modules/exporting.js"></script>
+        <center><div id="tasteChart" style="height: 50%;width:80%"></div></center>
+    <script>
+ 
+      $(function () {
+        $('#tasteChart').highcharts({
+            chart: {
+                type: 'scatter',
+                backgroundColor:'#f7f7f7' ,
+                zoomType: 'xy'
+            },
+            title: {
+                text: 'Our Ratings'
+            },
+            subtitle: {
+                text: 'Just for fun! I\'m not an elitist, nothing wrong with low RT reviews :]'
+            },
+            xAxis: {
+                title: {
+                    enabled: true,
+                    text: 'Our Average Rating'
+                },
+                startOnTick: true,
+                endOnTick: true,
+                showLastLabel: true
+            },
+            yAxis: {
+                title: {
+                    text: 'RottenTomatoes'
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'left',
+                verticalAlign: 'top',
+                x: 100,
+                y: 70,
+                floating: true,
+                backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
+                borderWidth: 1
+            },
+            plotOptions: {
+                scatter: {
+                    marker: {
+                        radius: 5,
+                        states: {
+                            hover: {
+                                enabled: true,
+                                lineColor: 'rgb(100,100,100)'
+                            }
+                        }
+                    },
+                    states: {
+                        hover: {
+                            marker: {
+                                enabled: false
+                            }
+                        }
+                    },
+
+                }
+            },
+            exporting: { enabled: false } ,
+            tooltip: {
+                formatter: function () {
+                    return ' <b>' + this.point.title + '</b><br>Critics: ' + this.point.y + " %<br>Us: " + this.point.x;
+                }
+            },
+            series: [{
+                name: 'Elena',
+                color: 'rgba(223, 83, 83, .5)',
+                data: [{
+                    y: 71,
+                    x: 3.25,
+                    title: 'The Voices'
+                }, {
+                    y: 8,
+                    x: 0.75,
+                    title: 'The Best of Me'
+                }, {
+                    y: 91,
+                    x: 3.75,
+                    title: 'The Departed'
+                }, {
+                    y: 72,
+                    x: 3.5,
+                    title: 'The Butler'
+                }, {
+                    y: 10,
+                    x: 1.75,
+                    title: 'The Boy Next Door'
+                }, {
+                    y: 93,
+                    x: 3.75,
+                    title: 'Speed'
+                }, {
+                    y: 70,
+                    x: 3,
+                    title: 'Liberal Arts'
+                }, {
+                    y: 34,
+                    x: 2.75,
+                    title: 'Two Night Stand'
+                }, {
+                    y: 2,
+                    x: 1,
+                    title: 'The Getaway'
+                }]
+            }, {
+                name: 'Cecile',
+                color: 'rgba(119, 152, 191, .5)',
+                data: [{
+                    y: 70,
+                    x: 4.5,
+                    title: 'About Time'
+                }, {
+                    y: 93,
+                    x: 3.5,
+                    title: 'About a Boy'
+                }, {
+                    y: 79,
+                    x: 4,
+                    title: 'We\'re the Millers'
+                }, {
+                    y: 47,
+                    x: 3.5,
+                    title: 'McFarland, USA'
+                }, {
+                    y: 72,
+                    x: 3.5,
+                    title: 'The DUFF'
+                }, {
+                    y: 54,
+                    x: 3.25,
+                    title: 'Age of Adaline'
+                }, {
+                    y: 70,
+                    x: 3.75,
+                    title: 'What If'
+                }, {
+                    y: 94,
+                    x: 3.25,
+                    title: 'The Queen of Versailles'
+                }, {
+                    y: 72,
+                    x: 3.75,
+                    title: 'Big Eyes'
+                }, {
+                    y: 94,
+                    x: 4.25,
+                    title: 'Whiplash'
+                }, {
+                    y: 92,
+                    x: 4,
+                    title: 'Ex Machina'
+                }, {
+                    y: 81,
+                    x: 3.25,
+                    title: 'Beyond the Lights'
+                }, {
+                    y: 90,
+                    x: 3.25,
+                    title: 'District 9'
+                }, {
+                    y: 77,
+                    x: 3.5,
+                    title: 'St. Vincent'
+                }, {
+                    y: 89,
+                    x: 4,
+                    title: 'Still Alice'
+                }, {
+                    y: 62,
+                    x: 3.75,
+                    title: 'Changeling'
+                }, {
+                    y: 52,
+                    x: 4,
+                    title: 'Spare Parts'
+                }, {
+                    y: 77,
+                    x: 3.75,
+                    title: 'The Sisterhood of Traveling Pants'
+                }]
+            }]
+        });
+    }); 
+    </script>
+    </div>
+    </section>
+
+
+    <!-- Media Section -->
+    <section id="media">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Media</h2>
+                    <h3 class="section-subheading text-muted">Because sometimes even I have trouble keeping track.</h3>
+                </div>
+            </div>
+
+            <div class="lessSpace"></div>
+            <center><button  class="btn btn-small btn-primary" data-toggle="modal" data-target="#mediaModal">View Watchlist</button></center><br>
+            <h3><iframe id="JotFormIFrame" onload="window.parent.scrollTo(0,0)" allowtransparency="true" src="http://form.jotform.us/form/52100428266144" frameborder="0" style="width:100%; height:auto; border:none;" scrolling="no"></iframe><script type="text/javascript">window.handleIFrameMessage = function(e) {var args = e.data.split(":");var iframe = document.getElementById("JotFormIFrame");if (!iframe)return;switch (args[0]) {case "scrollIntoView":iframe.scrollIntoView();break;case "setHeight":iframe.style.height = args[1] + "px";break;case "collapseErrorPage":if (iframe.clientHeight > window.innerHeight) {iframe.style.height = window.innerHeight + "px";}break;case "reloadPage":window.location.reload();break;}};if (window.addEventListener) {window.addEventListener("message", handleIFrameMessage, false);} else if (window.attachEvent) {window.attachEvent("onmessage", handleIFrameMessage);}</script></h3> 
+                 </div>
+            </div>
+        </div>
+<!--          <div class="lessSpace"></div>
+ -->    </section>
+
+
+
+<section id="suggestions" class="bg-light-gray">
+<div class="container">
+    <div class="row"> 
+        <div class="col-lg-8 col-lg-offset-2">
+        <h2 class="section-heading">Suggestions</h2>
+        <h3>Articles</h3>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><b>Hiroshima</b> (WC: 30,000) </a>  -  <a href="http://www.newyorker.com/magazine/1946/08/31/hiroshima"><i>New Yorker</i></a>  
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <b><i>Hiroshima</i></b> is one of the most remarkable works of journalism ever published. Its narrative non-fiction style was unusual for the time, but even more striking was the way Hersey humanized the Japanese victims with sensitivity and dignity so soon after barrages of wartime propaganda had portrayed them as barbarians. Centering on six Japanese people caught up in the blast, <i>Hiroshima</i>'s empathetic reporting on the most horrific situation imaginable should be considered essential reading for anyone wanting to understand the human impact of nuclear weaponry seven decades after it was first deployed.
+         <a href="http://www.newyorker.com/magazine/1946/08/31/hiroshima">x</a>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><b>Overkill</b> (WC: 30,000) </a>  -  <a href="http://www.newyorker.com/magazine/2015/05/11/overkill-atul-gawande"><i>New Yorker</i></a>  
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        An avalanche of unnecessary medical care is harming patients physically and financially. What can we do about it?
+
+         <a href="http://www.newyorker.com/magazine/2015/05/11/overkill-atul-gawande">x</a>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Collapsible Group Item #3</a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+        <br><br>
+        <h3>Books</h3>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#book1"><b>Hiroshima</b> (WC: 30,000) </a>  -  <a href="http://www.newyorker.com/magazine/1946/08/31/hiroshima"><i>New Yorker</i></a>  
+                    </h4>
+                </div>
+                <div id="book1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <b><i>Hiroshima</i></b> is one of the most remarkable works of journalism ever published. Its narrative non-fiction style was unusual for the time, but even more striking was the way Hersey humanized the Japanese victims with sensitivity and dignity so soon after barrages of wartime propaganda had portrayed them as barbarians. Centering on six Japanese people caught up in the blast, <i>Hiroshima</i>'s empathetic reporting on the most horrific situation imaginable should be considered essential reading for anyone wanting to understand the human impact of nuclear weaponry seven decades after it was first deployed. <a href="http://www.newyorker.com/magazine/1946/08/31/hiroshima">x</a>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#book2"><b>Overkill</b> (WC: 30,000) </a>  -  <a href="http://www.newyorker.com/magazine/2015/05/11/overkill-atul-gawande"><i>New Yorker</i></a>  
+                    </h4>
+                </div>
+                <div id="book2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        An avalanche of unnecessary medical care is harming patients physically and financially. What can we do about it? <a href="http://www.newyorker.com/magazine/2015/05/11/overkill-atul-gawande">x</a>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#book3">Collapsible Group Item #3</a>
+                    </h4>
+                </div>
+                <div id="book3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+            <br><br>
+            <h3>Movies</h3>
+
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#movie1"><b>Hiroshima</b> (WC: 30,000) </a>  -  <a href="http://www.newyorker.com/magazine/1946/08/31/hiroshima"><i>New Yorker</i></a>  
+                    </h4>
+                </div>
+                <div id="movie1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <b><i>Hiroshima</i></b> is one of the most remarkable works of journalism ever published. Its narrative non-fiction style was unusual for the time, but even more striking was the way Hersey humanized the Japanese victims with sensitivity and dignity so soon after barrages of wartime propaganda had portrayed them as barbarians. Centering on six Japanese people caught up in the blast, <i>Hiroshima</i>'s empathetic reporting on the most horrific situation imaginable should be considered essential reading for anyone wanting to understand the human impact of nuclear weaponry seven decades after it was first deployed. <a href="http://www.newyorker.com/magazine/1946/08/31/hiroshima">x</a>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#movie2"><b>Overkill</b> (WC: 30,000) </a>  -  <a href="http://www.newyorker.com/magazine/2015/05/11/overkill-atul-gawande"><i>New Yorker</i></a>  
+                    </h4>
+                </div>
+                <div id="movie2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        An avalanche of unnecessary medical care is harming patients physically and financially. What can we do about it? <a href="http://www.newyorker.com/magazine/2015/05/11/overkill-atul-gawande">x</a>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#movie3">Collapsible Group Item #3</a>
+                    </h4>
+                </div>
+                <div id="movie3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+</section>
+
+
     <section id="goodies">
         <div class="container">
             <div class="row">
@@ -731,7 +899,7 @@
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-file-image-o fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">PSDs</h4></a>
+                    <h4 class="service-heading">Dropbox</h4></a>
                     <p class="text-muted">Obviously I'm still here for all your photoshop needs, but for the rare occasions when I'm not at my laptop!</p>
 
 <!-- 
@@ -751,6 +919,7 @@
                     <p class="text-muted">I don't know if you've already purchased this... if you have, gift it to a friend and increase their quality of life by 100%</p></div>
             </div>
         </div>
+        </div>
     </section>
 
  
@@ -764,7 +933,7 @@
               </div>
               <div class="modal-body" >
 
-            <center><iframe src="http://www.jotform.com/table/52101435854045" frameborder="0" style="width: 100%; height: 100%; min-height: 150px;  scrolling:auto"></iframe></center>
+            <center><iframe src="http://www.jotform.com/table/52101435854045" frameborder="0" style="width: 100%; height: 100%; min-height: 180px;  scrolling:auto"></iframe></center>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
@@ -797,10 +966,12 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">PSDs</h4>
+                <h4 class="modal-title" id="myModalLabel">Dropbox</h4>
               </div>
               <div class="modal-body">
-                <h3><a href="https://www.dropbox.com/s/i4tzz9b7gy7e9v7/soulcycle.psd?dl=0"><img src="img/recipes/psd.png"></a></h3>
+                <h3><a href="https://www.dropbox.com/s/i4tzz9b7gy7e9v7/soulcycle.psd?dl=0"><img src="img/recipes/psd.png" style="height:100px"></a>
+                <a href="https://www.dropbox.com/s/60h8mo8ptlwwryt/TextExpander.dmg?dl=0"><img src="http://i.imgur.com/SBv0Y3T.png" style="height:100px"></a>
+                </h3>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
@@ -827,18 +998,6 @@
           </div>
         </div>
 
-
-
-<script>$('.modal').on('shown.bs.modal', function() {
-    $(this).find('.modal-dialog').css({
-        'margin-top': function () {
-            return -($(this).outerHeight() / 2);
-        },
-        'margin-left': function () {
-            return -($(this).outerWidth() / 2);
-        }
-    });
-});</script>
 <!-- 
     <section class="no-padding" id="recipes">
         <div class="container-fluid">
@@ -937,6 +1096,7 @@
         </div>
  
   -->
+
 
 <nav class='menu-ui'>
   <a href='#' class='active' data-filter='all'><b>Show all</b></a>
@@ -1212,7 +1372,7 @@ var geojson = [
 
 
 
-var map = L.mapbox.map('map', 'examples.map-20v6611k')
+var map = L.mapbox.map('map', 'examples.map-20v6611k', {attributionControl: false})
     .setView([37.410218, -122.160992], 12)
 
 
