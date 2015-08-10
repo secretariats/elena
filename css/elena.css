@@ -376,19 +376,19 @@ section h3.section-subheading {
     text-transform: none;
 }
 
-#recipes .recipes-item {
+#bucketlist .bucketlist-item {
     right: 0;
     margin: 0 0 15px;
 }
 
-#recipes .recipes-item .recipes-link {
+#bucketlist .bucketlist-item .bucketlist-link {
     display: block;
     position: relative;
     margin: 0 auto;
     max-width: 400px;
 }
 
-#recipes .recipes-item .recipes-link .recipes-hover {
+#bucketlist .bucketlist-item .bucketlist-link .bucketlist-hover {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -399,11 +399,11 @@ section h3.section-subheading {
     transition: all ease .5s;
 }
 
-#recipes .recipes-item .recipes-link .recipes-hover:hover {
+#bucketlist .bucketlist-item .bucketlist-link .bucketlist-hover:hover {
     opacity: .97;
 }
 
-#recipes .recipes-item .recipes-link .recipes-hover .recipes-hover-content {
+#bucketlist .bucketlist-item .bucketlist-link .bucketlist-hover .bucketlist-hover-content {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -414,16 +414,16 @@ section h3.section-subheading {
     color: #fff;
 }
 
-#recipes .recipes-item .recipes-link .recipes-hover .recipes-hover-content i {
+#bucketlist .bucketlist-item .bucketlist-link .bucketlist-hover .bucketlist-hover-content i {
     margin-top: -12px;
 }
 
-#recipes .recipes-item .recipes-link .recipes-hover .recipes-hover-content h3,
-#recipes .recipes-item .recipes-link .recipes-hover .recipes-hover-content h4 {
+#bucketlist .bucketlist-item .bucketlist-link .bucketlist-hover .bucketlist-hover-content h3,
+#bucketlist .bucketlist-item .bucketlist-link .bucketlist-hover .bucketlist-hover-content h4 {
     margin: 0;
 }
 
-#recipes .recipes-item .recipes-caption {
+#bucketlist .bucketlist-item .bucketlist-caption {
     margin: 0 auto;
     padding: 25px;
     max-width: 400px;
@@ -460,24 +460,24 @@ section h3.section-subheading {
     }
 }
 
-#recipes .recipes-item .recipes-caption h4 {
+#bucketlist .bucketlist-item .bucketlist-caption h4 {
     margin: 0;
     text-transform: none;
 }
 
-#recipes .recipes-item .recipes-caption p {
+#bucketlist .bucketlist-item .bucketlist-caption p {
     margin: 0;
     font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 16px;
     font-style: italic;
 }
 
-#recipes * {
+#bucketlist * {
     z-index: 2;
 }
 
 @media(min-width:767px) {
-    #recipes .recipes-item {
+    #bucketlist .bucketlist-item {
         margin: 0 0 30px;
     }
 }
@@ -857,7 +857,7 @@ section h3.section-subheading {
  
 
 @media(min-width:767px) {
-    #recipes .recipes-item {
+    #bucketlist .bucketlist-item {
         margin: 0 0 30px;
     }
 }
@@ -1203,7 +1203,7 @@ ul.social-buttons li a:active {
     outline: 0;
 }
 
-.recipes-modal .modal-content {
+.bucketlist-modal .modal-content {
     padding: 100px 0;
     min-height: 100%;
     border: 0;
@@ -1214,33 +1214,33 @@ ul.social-buttons li a:active {
     box-shadow: none;
 }
 
-.recipes-modal .modal-content h2 {
+.bucketlist-modal .modal-content h2 {
     margin-bottom: 15px;
     font-size: 3em;
     margin-top:-50px;
 }
 
-.recipes-modal .modal-content p {
+.bucketlist-modal .modal-content p {
     margin-bottom: 20px;
 }
 
-.recipes-modal .modal-content p.item-intro {
+.bucketlist-modal .modal-content p.item-intro {
     margin: 20px 0 30px;
     font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 16px;
     font-style: italic;
 }
 
-.recipes-modal .modal-content ul.list-inline {
+.bucketlist-modal .modal-content ul.list-inline {
     margin-top: 0;
     margin-bottom: 30px;
 }
 
-.recipes-modal .modal-content img {
+.bucketlist-modal .modal-content img {
     margin-bottom: 30px;
 }
 
-.recipes-modal .close-modal {
+.bucketlist-modal .close-modal {
     position: absolute;
     top: 25px;
     right: 25px;
@@ -1250,11 +1250,11 @@ ul.social-buttons li a:active {
     cursor: pointer;
 }
 
-.recipes-modal .close-modal:hover {
+.bucketlist-modal .close-modal:hover {
     opacity: .3;
 }
 
-.recipes-modal .close-modal .lr {
+.bucketlist-modal .close-modal .lr {
     z-index: 1051;
     width: 1px;
     height: 75px;
@@ -1265,7 +1265,7 @@ ul.social-buttons li a:active {
     transform: rotate(45deg);
 }
 
-.recipes-modal .close-modal .lr .rl {
+.bucketlist-modal .close-modal .lr .rl {
     z-index: 1052;
     width: 1px;
     height: 75px;
@@ -1275,7 +1275,7 @@ ul.social-buttons li a:active {
     transform: rotate(90deg);
 }
 
-.recipes-modal .modal-backdrop {
+.bucketlist-modal .modal-backdrop {
     display: none;
     opacity: 0;
 }
@@ -1318,15 +1318,30 @@ body {
 @media only screen and (min-width: 768px) {
   .goodies-modal {
     text-align: center;
-        overflow-y: auto;
+    overflow-y: auto;
 
   }
-  .goodies-modal:before {
+
+
+  #psdModal:before, #mediaModal:before, #fandangoModal:before {
     display: inline-block;
-    vertical-align: middle;
     content: " ";
     height: 25%;
   }
+
+  #recModal .modal-dialog {
+    width:80%;
+  }
+
+  #recModal .modal-body {
+    margin-left:20px;
+    margin-right:20px;
+  }
+
+  #recModal .modal-body {
+    text-align:left;
+  }
+
   .goodies-modal-dialog {
     display: inline-block;
     text-align: left;
@@ -1359,7 +1374,7 @@ h2 {
 
  
  .lessSpace { /*prevent form from being too close*/
-    margin-bottom:-30repx;
+    margin-bottom:-25px;
 }
  
 
@@ -1368,8 +1383,8 @@ h2 {
   background:#fff;
   position:absolute;
   float:right;
-  margin-top:10%;
-  margin-left:-7px;
+  margin-top:80px;
+  margin-left:10px;
   z-index:1;
   border-radius:3px;
   font-family:Montserrat;
@@ -1403,11 +1418,20 @@ h2 {
       color:#FFF;
       }
 
-.search-ui {
+#search {
+  position:relative;
+  margin-top:-103px;
+  margin-left:10px;
+  width:200px;
+  background:#fff;
+  font-size:10px;
   position:absolute;
-  margin-top:10%;
-  margin-left:-7px;
-  z-index:1000;
+  z-index:1;
+  border-radius:3px;
+  font-family:Montserrat;
+  width:100px;
+  border:1px solid rgba(0,0,0,0.4);
+
   }
 
 
@@ -1436,5 +1460,27 @@ h2 {
 
 .panel-heading a {
     color: white;
+    font-size: 14px;
+}
+
+#navigation{
+position:relative;
+  float:left;
+  margin-top:-191px;
+  margin-left:10px;
+ 
+}
+
+.parent {
+    height:100px;
+}
+
+#map {
+    height:500px;
+    max-height:500px;
+}
+
+#map img {
+    max-height:500px;
 }
 </style>
