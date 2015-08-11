@@ -1483,4 +1483,9 @@ position:relative;
 #map img {
     max-height:500px;
 }
+
+.mediaQuote  {
+    font-size:13px !important;
+    font-style:italic;
+}
 </style>
