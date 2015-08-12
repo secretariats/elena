@@ -1488,6 +1488,9 @@ position:relative;
     font-style:italic;
 }
 
+#message{
+    font-size:13px;
+}
 #postscript{
     font-size:12px;
 }
