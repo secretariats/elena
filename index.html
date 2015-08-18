@@ -1,62 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Happy Birthday!</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/elena.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
- 
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Happy Birthday!</title>
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/elena.css" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
-<style>
-  body { margin:0; padding:0; }
-  #map { position:relative; height: 500px; width:100%; }
-  .popupimage { width: 200px; margin: auto; padding: 10px;}
-</style>
-
-
-</head>
- 
+        <![endif]-->
+        <script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+        <style>
+        body { margin:0; padding:0; }
+        #map { position:relative; height: 500px; width:100%; }
+        .popupimage { width: 200px; margin: auto; padding: 10px;}
+        </style>
+    </head>
+    
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand page-scroll" href="#message">Elena</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -79,49 +67,40 @@
                     <li>
                         <a class="page-scroll" href="#map">Map</a>
                     </li>
-
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
-
-  <!-- Header -->
+    <!-- Header -->
     <header>
         <div class="header-content">
             <div class="header-content-inner">
                 <h1></h1>
                 <!-- <hr> -->
                 <p></p>
-<!--                 <a href="#message" class="btn btn-primary btn-xl page-scroll">❤</a>
- -->            </div>
+                <!--                 <a href="#message" class="btn btn-primary btn-xl page-scroll">❤</a>
+            -->            </div>
         </div>
     </header>
- 
+    
     <!-- Message -->
     <section id="message" class="bg-light-gray">
         <div class="container">
             <div class="row">
-                                <h2 class="section-heading">Elena:</h2>
+                <h2 class="section-heading">Elena:</h2>
                 <div class="col-lg-12 text-center">
-        <!--    <h3 class="section-subheading text-muted">Happy Birthday.</h3> -->                
-        </div>  <blockquote id="message"><p>I feel like we consume so much media and make so many plans, we needed somewhere to compile them. Yes, I know, these are all my plans, and this is probably the most self-absorbed birthday present ever <i>(does it even count as a present? it's the thought that counts, right?)</i>, but hey, I figure Milan has to score me at least a point or two. Plus, the idea is for you to contribute your own wishes and desires and ambitions -- mine are mainly just placeholders for yours, because clearly I value your dreams over mine ❤. And let's be real, if it wasn't a selfless act of friendship for me to include Little Guy instead of a Samoyed, as adorable and dignified as he is, then I don't know what is. </p>
-
-        <p>Anyway, I hope you ate a lot of chocolate cake, and that you've got ice cream to draw out the best in it. Also that you get to ride that Soulcycle Podium, and that all your reality tv shows work out the way you want them to. (I don't think the podium is supposed to be capitalized, but it felt like it had to be to emphasize all the significance it carries). </p>
-
-        <p>You wanna know a secret? I would pick you over any fictional character, every time. Even Claire. There are few people I argue with so fervently over so many things, but there are also few people whose ideologies and moral grounding I trust and concur with so surely, so here's to many more years of stimulating and 100% civilized debates -- as well as debates over some of your more questionable taste in men and their hairstyles. </p> </blockquote>
-         <center><img src="img/signature.png" style="width:220px"></center>
-         <br><blockquote id="message"  ><p>P.S.: Okay... every character except for Jack Bristow. And maybe Jack Shephard. But they've got great loads of angst and resentment and self-contempt and yet virtually no friends, so they <i>need</i> me. You don't, but you still choose to put up with me, so I owe you. </blockquote>
-
-        </div>
+                    <!--    <h3 class="section-subheading text-muted">Happy Birthday.</h3> -->
+                    </div>  <blockquote id="message"><p>I feel like we consume so much media and make so many plans, we needed somewhere to compile them. Yes, I know, these are all my plans, and this is probably the most self-absorbed birthday present ever <i>(does it even count as a present? it's the thought that counts, right?)</i>, but hey, I figure Milan has to score me at least a point or two. Plus, the idea is for you to contribute your own wishes and desires and ambitions -- mine are mainly just placeholders for yours, because clearly I value your dreams over mine ❤. And let's be real, if it wasn't a selfless act of friendship for me to include Little Guy instead of a Samoyed, as adorable and dignified as he is, then I don't know what is. </p>
+                    <p>Anyway, I hope you ate a lot of chocolate cake, and that you've got ice cream to draw out the best in it. Also that you get to ride that Soulcycle Podium, and that all your reality tv shows work out the way you want them to. (I don't think the podium is supposed to be capitalized, but it felt like it had to be to emphasize all the significance it carries). </p>
+                    <p>You wanna know a secret? I would pick you over any fictional character, every time. Even Claire. There are few people I argue with so fervently over so many things, but there are also few people whose ideologies and moral grounding I trust and concur with so surely, so here's to many more years of stimulating and 100% civilized debates -- as well as debates over some of your more questionable taste in men and their hairstyles. </p> </blockquote>
+                    <center><img src="img/signature.png" style="width:220px"></center>
+                <br><blockquote id="message"  ><p>P.S.: Okay... every character except for Jack Bristow. And maybe Jack Shephard. But they've got great loads of angst and resentment and self-contempt and yet virtually no friends, so they <i>need</i> me. You don't, but you still choose to put up with me, so I owe you. </blockquote>
+            </div>
         </div>
     </section>
-
-
-
-
-  <!-- Media Section -->
+    <!-- Media Section -->
     <section id="media">
         <div class="container">
             <div class="row">
@@ -130,21 +109,16 @@
                     <h3 class="section-subheading text-muted">Because sometimes even I have trouble keeping track.</h3>
                 </div>
             </div>
-                    <center><button  class="btn btn-small btn-primary" data-toggle="modal" data-target="#mediaModal">View Watchlist</button></center><br>
-
+            <center><button  class="btn btn-small btn-primary" data-toggle="modal" data-target="#mediaModal">View Watchlist</button></center><br>
             <div class="lessSpace"></div>
-                        <div class="lessSpace"></div>
-
-            <h3><iframe id="JotFormIFrame" onload="window.parent.scrollTo(0,0)" allowtransparency="true" src="http://form.jotform.us/form/52100428266144" frameborder="0" style="width:100%; height:auto; border:none;" scrolling="no"></iframe><script type="text/javascript">window.handleIFrameMessage = function(e) {var args = e.data.split(":");var iframe = document.getElementById("JotFormIFrame");if (!iframe)return;switch (args[0]) {case "scrollIntoView":iframe.scrollIntoView();break;case "setHeight":iframe.style.height = args[1] + "px";break;case "collapseErrorPage":if (iframe.clientHeight > window.innerHeight) {iframe.style.height = window.innerHeight + "px";}break;case "reloadPage":window.location.reload();break;}};if (window.addEventListener) {window.addEventListener("message", handleIFrameMessage, false);} else if (window.attachEvent) {window.attachEvent("onmessage", handleIFrameMessage);}</script></h3> 
-                 </div>
-            </div>
+            <div class="lessSpace"></div>
+            <h3><iframe id="JotFormIFrame" onload="window.parent.scrollTo(0,0)" allowtransparency="true" src="http://form.jotform.us/form/52100428266144" frameborder="0" style="width:100%; height:auto; border:none;" scrolling="no"></iframe><script type="text/javascript">window.handleIFrameMessage = function(e) {var args = e.data.split(":");var iframe = document.getElementById("JotFormIFrame");if (!iframe)return;switch (args[0]) {case "scrollIntoView":iframe.scrollIntoView();break;case "setHeight":iframe.style.height = args[1] + "px";break;case "collapseErrorPage":if (iframe.clientHeight > window.innerHeight) {iframe.style.height = window.innerHeight + "px";}break;case "reloadPage":window.location.reload();break;}};if (window.addEventListener) {window.addEventListener("message", handleIFrameMessage, false);} else if (window.attachEvent) {window.attachEvent("onmessage", handleIFrameMessage);}</script></h3>
         </div>
-
-                    <div class="lessSpace"></div>
-
+    </div>
+</div>
+<div class="lessSpace"></div>
 <!--          <div class="lessSpace"></div>
- -->    </section>
- 
+-->    </section>
 
 <!--TASTE CHART !-->
     <section id="taste" class="bg-light-gray">
@@ -348,723 +322,700 @@
 
 
   
-
-
-        <!-- TV Calendar Section -->
-    <section id="calendar">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Calendar</h2>
-                    <h3 class="section-subheading text-muted">I don't need a fancy planner, just send me your class schedule!<br> (This is meant for TV but you can't even tell cause our shows are all on hiatus lol)</h3>
-                </div>
+<!-- TV Calendar Section -->
+<section id="calendar">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Calendar</h2>
+                <h3 class="section-subheading text-muted">I don't need a fancy planner, just send me your class schedule!<br> (This is meant for TV but you can't even tell cause our shows are all on hiatus lol)</h3>
             </div>
-            <div class="row">
-
-                <div class="calendar" style="text-align:center">
-
-<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;showPrint=0&amp;src=v0i48u54q3bte02ccm3iisdo9k%40group.calendar.google.com&amp;color=%232F6309&amp;src=61lf8edennprmog6mu2ua9qutc%40group.calendar.google.com&amp;color=%235229A3&amp;src=5hku99i9nbt1hi8vv5coov6mhipts25e%40import.calendar.google.com&amp;color=%23A32929&amp;src=3cnijnt06pa0qf5arv8vemlouo%40group.calendar.google.com&amp;color=%232952A3&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23B1365F&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="90%" height="600" frameborder="0" scrolling="no"></iframe>
- </section>
-
-
-   <!-- bucketlist Grid Section -->
-    <section id="bucketlist" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Bucketlist</h2>
-                    <h3 class="section-subheading text-muted">Essentially, all the food and places Cecile would like best.<br> (But please do send suggestions)</h3>
-                </div>
-            </div>
-
-             <div class="col-md-3 col-sm-6 bucketlist-item">
-                    <a href="#bucketlistModal1" class="bucketlist-link" data-toggle="modal">
-                        <div class="bucketlist-hover">
-                            <div class="bucketlist-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+        </div>
+        <div class="row">
+            <div class="calendar" style="text-align:center">
+                <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;showPrint=0&amp;src=v0i48u54q3bte02ccm3iisdo9k%40group.calendar.google.com&amp;color=%232F6309&amp;src=61lf8edennprmog6mu2ua9qutc%40group.calendar.google.com&amp;color=%235229A3&amp;src=5hku99i9nbt1hi8vv5coov6mhipts25e%40import.calendar.google.com&amp;color=%23A32929&amp;src=3cnijnt06pa0qf5arv8vemlouo%40group.calendar.google.com&amp;color=%232952A3&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23B1365F&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="90%" height="600" frameborder="0" scrolling="no"></iframe>
+            </section>
+            <!-- bucketlist Grid Section -->
+            <section id="bucketlist" class="bg-light-gray">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h2 class="section-heading">Bucketlist</h2>
+                            <h3 class="section-subheading text-muted">Essentially, all the food and places Cecile would like best.<br> (But please do send suggestions)</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 bucketlist-item">
+                        <a href="#bucketlistModal1" class="bucketlist-link" data-toggle="modal">
+                            <div class="bucketlist-hover">
+                                <div class="bucketlist-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/bucketlist/yosemite2.png" class="img-responsive" alt="">
+                        </a>
+                        <div class="bucketlist-caption">
+                            <h4>Yosemite</h4>
+                            <p class="text-muted">Sightseeing</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 bucketlist-item">
+                        <a href="#bucketlistModal2" class="bucketlist-link" data-toggle="modal">
+                            <div class="bucketlist-hover">
+                                <div class="bucketlist-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/bucketlist/midnightmunchies.png" class="img-responsive" alt="">
+                        </a>
+                        <div class="bucketlist-caption">
+                            <h4>MunchCakes</h4>
+                            <p class="text-muted">Food Delivery</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 bucketlist-item">
+                        <a href="#bucketlistModal3" class="bucketlist-link" data-toggle="modal">
+                            <div class="bucketlist-hover">
+                                <div class="bucketlist-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/bucketlist/sf.png" class="img-responsive" alt="">
+                        </a>
+                        <div class="bucketlist-caption">
+                            <h4>San Francisco</h4>
+                            <p class="text-muted">Sightseeing</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 bucketlist-item">
+                            <a href="#bucketlistModal4" class="bucketlist-link" data-toggle="modal">
+                                <div class="bucketlist-hover">
+                                    <div class="bucketlist-hover-content">
+                                        <i class="fa fa-plus fa-3x"></i>
+                                    </div>
+                                </div>
+                                <img src="img/bucketlist/tilden.png"  class="img-responsive" alt="">
+                            </a>
+                            <div class="bucketlist-caption">
+                                <h4>Tilden Park</h4>
+                                <p class="text-muted">Hiking</p>
                             </div>
                         </div>
-                        <img src="img/bucketlist/yosemite2.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="bucketlist-caption">
-                        <h4>Yosemite</h4>
-                        <p class="text-muted">Sightseeing</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 bucketlist-item">
-                    <a href="#bucketlistModal2" class="bucketlist-link" data-toggle="modal">
-                        <div class="bucketlist-hover">
-                            <div class="bucketlist-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                        <div class="col-md-3 col-sm-6 bucketlist-item">
+                            <a href="#bucketlistModal5" class="bucketlist-link" data-toggle="modal">
+                                <div class="bucketlist-hover">
+                                    <div class="bucketlist-hover-content">
+                                        <i class="fa fa-plus fa-3x"></i>
+                                    </div>
+                                </div>
+                                <img src="img/bucketlist/eggnests.png"  class="img-responsive" alt="">
+                            </a>
+                            <div class="bucketlist-caption">
+                                <h4>Egg Nests</h4>
+                                <p class="text-muted">Food</p>
                             </div>
                         </div>
-                        <img src="img/bucketlist/midnightmunchies.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="bucketlist-caption">
-                        <h4>MunchCakes</h4>
-                        <p class="text-muted">Food Delivery</p>
-                    </div>
-                </div>
-                 <div class="col-md-3 col-sm-6 bucketlist-item">
-                    <a href="#bucketlistModal3" class="bucketlist-link" data-toggle="modal">
-                        <div class="bucketlist-hover">
-                            <div class="bucketlist-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                        <div class="col-md-3 col-sm-6 bucketlist-item">
+                            <a href="#bucketlistModal6" class="bucketlist-link" data-toggle="modal">
+                                <div class="bucketlist-hover">
+                                    <div class="bucketlist-hover-content">
+                                        <i class="fa fa-plus fa-3x"></i>
+                                    </div>
+                                </div>
+                                <img src="img/bucketlist/smores.png"  class="img-responsive" alt="">
+                            </a>
+                            <div class="bucketlist-caption">
+                                <h4>Indoor S'mores</h4>
+                                <p class="text-muted">Dessert</p>
                             </div>
                         </div>
-                        <img src="img/bucketlist/sf.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="bucketlist-caption">
-                        <h4>San Francisco</h4>
-                        <p class="text-muted">Sightseeing</p>
-                    </div>
-                </div>
-            <div class="row">
-                <div class="col-md-3 col-sm-6 bucketlist-item">
-                    <a href="#bucketlistModal4" class="bucketlist-link" data-toggle="modal">
-                        <div class="bucketlist-hover">
-                            <div class="bucketlist-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                        <div class="col-md-3 col-sm-6 bucketlist-item">
+                            <a href="#bucketlistModal7" class="bucketlist-link" data-toggle="modal">
+                                <div class="bucketlist-hover">
+                                    <div class="bucketlist-hover-content">
+                                        <i class="fa fa-plus fa-3x"></i>
+                                    </div>
+                                </div>
+                                <img src="img/bucketlist/polarbears.png" class="img-responsive" alt="">
+                            </a>
+                            <div class="bucketlist-caption">
+                                <h4>Cupcakes</h4>
+                                <p class="text-muted">Dessert</p>
                             </div>
                         </div>
-                        <img src="img/bucketlist/tilden.png"  class="img-responsive" alt="">
-                    </a>
-                    <div class="bucketlist-caption">
-                        <h4>Tilden Park</h4>
-                        <p class="text-muted">Hiking</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 bucketlist-item">
-                    <a href="#bucketlistModal5" class="bucketlist-link" data-toggle="modal">
-                        <div class="bucketlist-hover">
-                            <div class="bucketlist-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                        <div class="col-md-3 col-sm-6 bucketlist-item">
+                            <a href="#bucketlistModal8" class="bucketlist-link" data-toggle="modal">
+                                <div class="bucketlist-hover">
+                                    <div class="bucketlist-hover-content">
+                                        <i class="fa fa-plus fa-3x"></i>
+                                    </div>
+                                </div>
+                                <img src="img/bucketlist/brownies.png" class="img-responsive" alt="">
+                            </a>
+                            <div class="bucketlist-caption">
+                                <h4>Brownies</h4>
+                                <p class="text-muted">Dessert</p>
                             </div>
                         </div>
-                        <img src="img/bucketlist/eggnests.png"  class="img-responsive" alt="">
-                    </a>
-                    <div class="bucketlist-caption">
-                        <h4>Egg Nests</h4>
-                        <p class="text-muted">Food</p>
                     </div>
                 </div>
-                   <div class="col-md-3 col-sm-6 bucketlist-item">
-                    <a href="#bucketlistModal6" class="bucketlist-link" data-toggle="modal">
-                        <div class="bucketlist-hover">
-                            <div class="bucketlist-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+            </section>
+            <!-- BUCKETLIST MODALS!-->
+            <!-- bucketlist Modal 1; YOSEMITE -->
+            <div class="bucketlist-modal modal fade" id="bucketlistModal1" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl">
                             </div>
                         </div>
-                        <img src="img/bucketlist/smores.png"  class="img-responsive" alt="">
-                    </a>
-                    <div class="bucketlist-caption">
-                        <h4>Indoor S'mores</h4>
-                        <p class="text-muted">Dessert</p>
                     </div>
-                </div>
-                 <div class="col-md-3 col-sm-6 bucketlist-item">
-                    <a href="#bucketlistModal7" class="bucketlist-link" data-toggle="modal">
-                        <div class="bucketlist-hover">
-                            <div class="bucketlist-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here -->
+                                    <h2>Yosemite</h2>
+                                    <p class="item-intro text-muted">Let's go see El Capitan.</p>
+                                    <img class="img-responsive img-centered" src="img/bucketlist/yosemite4.png" alt="">
+                                    <p>I haven't been here since TEAM, and I can guarantee it would be a lot more fun with you than with my freshman year group.</p>
+                                    <p>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <img src="img/bucketlist/polarbears.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="bucketlist-caption">
-                        <h4>Cupcakes</h4>
-                        <p class="text-muted">Dessert</p>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 bucketlist-item">
-                    <a href="#bucketlistModal8" class="bucketlist-link" data-toggle="modal">
-                        <div class="bucketlist-hover">
-                            <div class="bucketlist-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
+                <!-- bucketlist Modal 2; YOSEMITE -->
+                <div class="bucketlist-modal modal fade" id="bucketlistModal2" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-content">
+                        <div class="close-modal" data-dismiss="modal">
+                            <div class="lr">
+                                <div class="rl">
+                                </div>
                             </div>
                         </div>
-                        <img src="img/bucketlist/brownies.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="bucketlist-caption">
-                        <h4>Brownies</h4>
-                        <p class="text-muted">Dessert</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-<!-- BUCKETLIST MODALS!-->
-
-    <!-- bucketlist Modal 1; YOSEMITE -->
-    <div class="bucketlist-modal modal fade" id="bucketlistModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Yosemite</h2>
-                            <p class="item-intro text-muted">Let's go see El Capitan.</p>
-                            <img class="img-responsive img-centered" src="img/bucketlist/yosemite4.png" alt="">
-                             <p>I haven't been here since TEAM, and I can guarantee it would be a lot more fun with you than with my freshman year group.</p>
-                            <p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 col-lg-offset-2">
+                                    <div class="modal-body">
+                                        <!-- Project Details Go Here -->
+                                        <h2><a href="http://www.midnightmunchiesbakery.com/index.html">Midnight Munchies Bakery</a></h2>
+                                        <p class="item-intro text-muted"><b>Proposition</b>: Late night movie night with milk & freshly-baked cookies</p>
+                                        <img class="img-responsive img-centered" src="img/bucketlist/midnightmunchies2.png" alt="">
+                                        <p>I want to try them all, but most of all:</p>
+                                        <p><a href="http://www.midnightmunchiesbakery.com/store.html#!/Double-Rainbow-Half-Dozen/p/27214916/category=6327771"><b>Double Rainbow</b></a>:<i> Chocolate Chip Cookie spiked with Candy Coated Chocolates and Crushed Potato Chips for a deliciously chewy and crunchy surprise.</i></p>
+                                        <p><a href="http://www.midnightmunchiesbakery.com/store.html#!/Custom-MunchCakes-Half-Dozen/p/27234062/category=6327785"><b>MunchCakes</b></a>: <i>Cookie cupcakes taken to the next level. Choose two of our cookies and we will bake them around a cookie cream sandwich. All 3 layers can be customized, with over 100 possibilities.</i></p>
+                                    </ul>
+                                    <p>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-   <!-- bucketlist Modal 2; YOSEMITE -->
-    <div class="bucketlist-modal modal fade" id="bucketlistModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2><a href="http://www.midnightmunchiesbakery.com/index.html">Midnight Munchies Bakery</a></h2>
-                            <p class="item-intro text-muted"><b>Proposition</b>: Late night movie night with milk & freshly-baked cookies</p>
-                            <img class="img-responsive img-centered" src="img/bucketlist/midnightmunchies2.png" alt="">
-                            <p>I want to try them all, but most of all:</p>
-                            <p><a href="http://www.midnightmunchiesbakery.com/store.html#!/Double-Rainbow-Half-Dozen/p/27214916/category=6327771"><b>Double Rainbow</b></a>:<i> Chocolate Chip Cookie spiked with Candy Coated Chocolates and Crushed Potato Chips for a deliciously chewy and crunchy surprise.</i></p>
-                             <p><a href="http://www.midnightmunchiesbakery.com/store.html#!/Custom-MunchCakes-Half-Dozen/p/27234062/category=6327785"><b>MunchCakes</b></a>: <i>Cookie cupcakes taken to the next level. Choose two of our cookies and we will bake them around a cookie cream sandwich. All 3 layers can be customized, with over 100 possibilities.</i></p>
-                             </ul>
-                            <p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
+                <!-- bucketlist Modal 3; SAN FRANCISCO -->
+                <div class="bucketlist-modal modal fade" id="bucketlistModal3" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-content">
+                        <div class="close-modal" data-dismiss="modal">
+                            <div class="lr">
+                                <div class="rl">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 col-lg-offset-2">
+                                    <div class="modal-body">
+                                        <!-- Project Details Go Here -->
+                                        <h2>San Francisco</h2>
+                                        <p class="item-intro text-muted">We can stick to the non-sketchy parts, I promise.</p>
+                                        <img class="img-responsive img-centered" src="img/bucketlist/sf2.png" alt="">
+                                        <p>I know it's not your favorite city, but if you haven't reached a saturation point yet I feel like I've never lived the tourist experience!
+                                            <p><a href="http://www.yelp.com/biz/la-taqueria-san-francisco-2?start=80"><b>La Taqueria</b></a>: Fivethirtyeight voted this <a href="http://fivethirtyeight.com/burrito/#brackets-view">America's Best Burrito</a>!</p>
+                                            <p><a href="http://www.yelp.com/biz/tommys-joynt-san-francisco"><b>Tommy's Joynt</b></a>: Roast beef, beef brisket, salmon, mashed potatoes, green beans... all of my ultimate comfort food. This is the place I've been searching for my whole life. <a href="http://www.netbaan.com/tommysjoynt/menu2.html">(Menu)</a>
+                                            <p>
+                                                Then let's grab an Ike's and go for a walk:
+                                                <p><a href="http://www.yelp.com/biz/crissy-field-san-francisco-2?osq=views"><b>Crissy Field</b></a> | <a href="http://www.yelp.com/biz/twin-peaks-san-francisco"><b>Twin Peaks</b></a> | <a href="http://www.yelp.com/biz/fort-point-san-francisco"><b>Fort Point</b></a> | <b><a href="http://www.yelp.com/biz/lands-end-trail-san-francisco?page_src=related_bizes">Land's End Trail</a></b> | <b><a href="http://www.yelp.com/biz/strawberry-hill-san-francisco?page_src=related_bizes">Strawberry Hill</b></a> | <b><a href="http://www.yelp.com/biz/the-16th-avenue-tiled-steps-project-san-francisco">The 16th Avenue Tiled Steps Project</a></b></p>
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- bucketlist Modal 4; Tilden Park -->
+                        <div class="bucketlist-modal modal fade" id="bucketlistModal4" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-content">
+                                <div class="close-modal" data-dismiss="modal">
+                                    <div class="lr">
+                                        <div class="rl">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-8 col-lg-offset-2">
+                                            <div class="modal-body">
+                                                <!-- Project Details Go Here -->
+                                                <h2><a href="http://www.yelp.com/biz/tilden-regional-park-berkeley-2">Tilden Park</a></h2>
+                                                <p class="item-intro text-muted">New picnic spots! The best view of the Bay.</p>
+                                                <img class="img-responsive img-centered" src="img/bucketlist/grizzly2.png" alt="">
+                                                <p>This is supposedly the best part of the Oakland-Berkeley Hills, especially if you climb <a href="http://www.yelp.com/biz/grizzly-peak-berkeley-2">Grizzly Peak</a>. Since moving to the Midwest, I have a deeper appreciation for free scenic views, and I feel like we haven't fully capitalized on the blessing of where we live! </p><p>The park even has <a href="http://www.yelp.com/biz/redwood-valley-railway-orinda?page_src=best_of_yelp">steam trains</a> and an <a href="http://www.yelp.com/biz/tilden-regional-park-little-farm-berkeley"> animal farm</a>, and obviously Berkeley and Oakland have tons of great food.</p>
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- bucketlist Modal 5; EGG NESTS -->
+                        <div class="bucketlist-modal modal fade" id="bucketlistModal5" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-content">
+                                <div class="close-modal" data-dismiss="modal">
+                                    <div class="lr">
+                                        <div class="rl">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-8 col-lg-offset-2">
+                                            <div class="modal-body">
+                                                <h2><a href="http://thepioneerwoman.com/cooking/2013/03/eggs-in-hash-brown-nests/">Eggs in Hash Brown Nests</a></h2>
+                                                <p class="item-intro text-muted">Okay look how cute these are.</p>
+                                                <img class="img-responsive img-centered" src="img/bucketlist/eggnests2.png" alt="">
+                                                <p><b>INGREDIENTS</b><br>
+                                                    6 whole Medium Russet Potatoes (6 To 8)<br>
+                                                    Salt And Pepper, to taste<br>
+                                                    24 whole Large Eggs<br>
+                                                    Non-stick Cooking Spray<br><br>
+                                                    <b>INSTRUCTIONS</b><br>
+                                                    1. Preheat the oven to 400 degrees.
+                                                    <p>2. Bake the potatoes until almost tender (potatoes should still have a little bite) 45 minutes to 1 hour. Allow to cool, and then peel and grate them. Season well with salt and pepper. INCREASE OVEN TEMP TO 425 DEGREES.</p>
+                                                    <p>3. Spray 2 muffin pans generously with cooking spray. Scoop 3 to 4 tablespoons of grated potato into each muffin cup. Use your fingers to gently press the sides and bottom in each muffin hole to make a nest (don't press the potatoes firmly against the pan; they should sit lightly in the pan.) Spray again (very lightly!) with cooking spray. </p>
+                                                    <p>4. Bake for 15 to 20 minutes. Watch and make sure they do not burn. (If they seem like they're not browning, kick up the temp to 450.) Remove when the nests are golden brown.</p>
+                                                    <p>5. Allow the nests to cool. Crack an egg into each one. Sprinkle with salt and pepper and bake until the whites are set, about 15 minutes.  </p>
+                                                    <p>5. Remove from the muffin pan with a spoon or fork and serve.</p>
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- bucketlist Modal 6; SMORES -->
+                            <div class="bucketlist-modal modal fade" id="bucketlistModal6" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-content">
+                                    <div class="close-modal" data-dismiss="modal">
+                                        <div class="lr">
+                                            <div class="rl">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-8 col-lg-offset-2">
+                                                <div class="modal-body">
+                                                    <h2><a href="http://www.dessertfortwo.com/2013/12/indoor-smores/">Indoor S'mores</a></h2>
+                                                    <p class="item-intro text-muted">Or, you know, I guess we could go to a real camping site or something.</p>
+                                                    <img class="img-responsive img-centered" src="img/bucketlist/smores2.png" alt="">
+                                                    <p><b>INGREDIENTS</b><br>
+                                                        1 cup chocolate chips<br>
+                                                        8 large marshmallows graham crackers for dipping<br><br>
+                                                        <b>INSTRUCTIONS</b><br>
+                                                        1. Preheat the oven to 450.
+                                                        <p>2. In a cast iron skillet, add the chocolate chips. Snip the large marshmallows in half and top the chocolate chips with them. (You could also use a scoop of mini marshmallows alternatively.)</p>
+                                                        <p>3. Once the oven is up to temperature, add the skillet to the oven. Bake for 7-9 minutes, or until the marshmallows turn golden brown.</p>
+                                                        <p>4. Serve with graham crackers for scooping.</p>
+                                                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- bucketlist Modal 7; CUPCAKES -->
+                                <div class="bucketlist-modal modal fade" id="bucketlistModal7" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-content">
+                                        <div class="close-modal" data-dismiss="modal">
+                                            <div class="lr">
+                                                <div class="rl">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-8 col-lg-offset-2">
+                                                    <div class="modal-body">
+                                                        <!-- Project Details Go Here -->
+                                                        <h2><a href="http://www.bakerella.com/more-minis/comment-page-2/#comments">Polar Bear Cupcakes</a></h2>
+                                                        <p class="item-intro text-muted">Or these could totally become Samoyed cupcakes.</p>
+                                                        <img class="img-responsive img-centered" src="img/bucketlist/polarbears2.png" alt="">
+                                                        <p>Basically just chocolate cupcakes decorated as you wish. ALTERNATIVELY, she also made these <a href="http://www.bakerella.com/easy-little-pandas/">pandas</a> that appeal to me because chocolate chips, but polar bears >> pandas so tough call! We can also totally improvise with our better tasting ingredients I bet.</p>
+                                                        <img class="img-responsive img-centered" src="img/bucketlist/pandas2.png" alt="">
+                                                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- bucketlist Modal 8; BROWNIES -->
+                                <div class="bucketlist-modal modal fade" id="bucketlistModal8" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <div class="modal-content">
+                                        <div class="close-modal" data-dismiss="modal">
+                                            <div class="lr">
+                                                <div class="rl">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-8 col-lg-offset-2">
+                                                    <div class="modal-body">
+                                                        <!-- Project Details Go Here -->
+                                                        <h2>Caramel Brownies</h2>
+                                                        <p class="item-intro text-muted">Because I'm still on a path to recreate Kelly's from Senior year of high school.</p>
+                                                        <img class="img-responsive img-centered" src="img/bucketlist/brownies2.png" alt="">
+                                                        <b>DIRECTIONS:</b>
+                                                        <p>1. Preheat the oven to whatever it says on your brownie mix box (325 degrees F for Ghirardelli). Spray a 9x9-inch metal pan with nonstick spray and then line with a 9x15-inch strip of parchment paper, letting it come up and over two sides. Spray the parchment with nonstick spray too. </p>
+                                                        <p>2. In a large bowl, prepare your brownie batter as directed on the box. Spread 1/2 of the brownie batter into your prepared pan. Place the chocolate-covered caramels on top in 5 rows of 5. Spoon the remaining brownie batter on top and spread to cover.</p>
+                                                        <p>3. Bake the brownies as directed on your brownie mix box for a 9x9-inch pan.</p>
+                                                        <p>4. Let the brownies cool completely and then gently lift the parchment paper and brownies out of the pan and onto a cutting board. Cut into squares and serve!</p>
+                                                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <section id="goodies">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-12 text-center">
+                                                <h2 class="section-heading">(Kind Of) Presents  </h2>
+                                                <h3 class="section-subheading text-muted">More stuff I like... aka QUALITY.</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="row text-center">
+                                                <div class="col-md-4">
+                                                    <a href="#" data-toggle="modal" data-target="#recModal"><span class="fa-stack fa-4x">
+                                                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                                        <i class="fa fa-bookmark fa-stack-1x  fa-inverse"></i>
+                                                    </span>
+                                                <h4 class="service-heading">Media Recs</h4></a>
+                                                <p class="text-muted">My suggestions for combatting boredom by learning and expanding your views of the world! Also known as: I want people to discuss long, depressing articles with!</p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <a href="#" data-toggle="modal" data-target="#psdModal"><span class="fa-stack fa-4x">
+                                                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                                    <i class="fa fa-file-o fa-stack-1x fa-inverse"></i>
+                                                </span>
+                                            <h4 class="service-heading">Dropbox</h4></a>
+                                            <p class="text-muted">Obviously I'm still here for all your photoshop needs, but for the rare occasions when I'm not at my laptop! Plus, my latest attempt to improve your workflow.</p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a href="#" data-toggle="modal" data-target="#fandangoModal"><span class="fa-stack fa-4x">
+                                                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                                <i class="fa fa-ticket fa-stack-1x fa-inverse"></i>
+                                            </span>
+                                        <h4 class="service-heading"> Fandango</a></h4>
+                                        <p class="text-muted">Because I'm terribly uncreative and movies are the best gift known to man, aside from excellent tv shows with solid character development and sustained story arcs.</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- bucketlist Modal 3; SAN FRANCISCO -->
-    <div class="bucketlist-modal modal fade" id="bucketlistModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>San Francisco</h2>
-                            <p class="item-intro text-muted">We can stick to the non-sketchy parts, I promise.</p>
-                            <img class="img-responsive img-centered" src="img/bucketlist/sf2.png" alt="">
-                            <p>I know it's not your favorite city, but if you haven't reached a saturation point yet I feel like I've never lived the tourist experience!
-                            <p><a href="http://www.yelp.com/biz/la-taqueria-san-francisco-2?start=80"><b>La Taqueria</b></a>: Fivethirtyeight voted this <a href="http://fivethirtyeight.com/burrito/#brackets-view">America's Best Burrito</a>!</p>
-
-                            <p><a href="http://www.yelp.com/biz/tommys-joynt-san-francisco"><b>Tommy's Joynt</b></a>: Roast beef, beef brisket, salmon, mashed potatoes, green beans... all of my ultimate comfort food. This is the place I've been searching for my whole life. <a href="http://www.netbaan.com/tommysjoynt/menu2.html">(Menu)</a> 
-                            <p>
-                            Then let's grab an Ike's and go for a walk:
-                            <p><a href="http://www.yelp.com/biz/crissy-field-san-francisco-2?osq=views"><b>Crissy Field</b></a> | <a href="http://www.yelp.com/biz/twin-peaks-san-francisco"><b>Twin Peaks</b></a> | <a href="http://www.yelp.com/biz/fort-point-san-francisco"><b>Fort Point</b></a> | <b><a href="http://www.yelp.com/biz/lands-end-trail-san-francisco?page_src=related_bizes">Land's End Trail</a></b> | <b><a href="http://www.yelp.com/biz/strawberry-hill-san-francisco?page_src=related_bizes">Strawberry Hill</b></a> | <b><a href="http://www.yelp.com/biz/the-16th-avenue-tiled-steps-project-san-francisco">The 16th Avenue Tiled Steps Project</a></b></p>
-                         <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- bucketlist Modal 4; Tilden Park -->
-    <div class="bucketlist-modal modal fade" id="bucketlistModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2><a href="http://www.yelp.com/biz/tilden-regional-park-berkeley-2">Tilden Park</a></h2>
-                            <p class="item-intro text-muted">New picnic spots! The best view of the Bay.</p>
-                            <img class="img-responsive img-centered" src="img/bucketlist/grizzly2.png" alt="">
-                            <p>This is supposedly the best part of the Oakland-Berkeley Hills, especially if you climb <a href="http://www.yelp.com/biz/grizzly-peak-berkeley-2">Grizzly Peak</a>. Since moving to the Midwest, I have a deeper appreciation for free scenic views, and I feel like we haven't fully capitalized on the blessing of where we live! </p><p>The park even has <a href="http://www.yelp.com/biz/redwood-valley-railway-orinda?page_src=best_of_yelp">steam trains</a> and an <a href="http://www.yelp.com/biz/tilden-regional-park-little-farm-berkeley"> animal farm</a>, and obviously Berkeley and Oakland have tons of great food.</p>
-                         <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- bucketlist Modal 5; EGG NESTS -->
-    <div class="bucketlist-modal modal fade" id="bucketlistModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2><a href="http://thepioneerwoman.com/cooking/2013/03/eggs-in-hash-brown-nests/">Eggs in Hash Brown Nests</a></h2>
-                            <p class="item-intro text-muted">Okay look how cute these are.</p>
-                            <img class="img-responsive img-centered" src="img/bucketlist/eggnests2.png" alt="">
-                            <p><b>INGREDIENTS</b><br>
-                            6 whole Medium Russet Potatoes (6 To 8)<br>
-                             Salt And Pepper, to taste<br>
-                            24 whole Large Eggs<br>
-                             Non-stick Cooking Spray<br><br>
-                            <b>INSTRUCTIONS</b><br>
-                            1. Preheat the oven to 400 degrees.
-                            <p>2. Bake the potatoes until almost tender (potatoes should still have a little bite) 45 minutes to 1 hour. Allow to cool, and then peel and grate them. Season well with salt and pepper. INCREASE OVEN TEMP TO 425 DEGREES.</p>
-                            <p>3. Spray 2 muffin pans generously with cooking spray. Scoop 3 to 4 tablespoons of grated potato into each muffin cup. Use your fingers to gently press the sides and bottom in each muffin hole to make a nest (don't press the potatoes firmly against the pan; they should sit lightly in the pan.) Spray again (very lightly!) with cooking spray. </p>
-                            <p>4. Bake for 15 to 20 minutes. Watch and make sure they do not burn. (If they seem like they're not browning, kick up the temp to 450.) Remove when the nests are golden brown.</p>
-                            <p>5. Allow the nests to cool. Crack an egg into each one. Sprinkle with salt and pepper and bake until the whites are set, about 15 minutes.  </p>
-                            <p>5. Remove from the muffin pan with a spoon or fork and serve.</p> 
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- bucketlist Modal 6; SMORES -->
-    <div class="bucketlist-modal modal fade" id="bucketlistModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2><a href="http://www.dessertfortwo.com/2013/12/indoor-smores/">Indoor S'mores</a></h2>
-                            <p class="item-intro text-muted">Or, you know, I guess we could go to a real camping site or something.</p>
-                            <img class="img-responsive img-centered" src="img/bucketlist/smores2.png" alt="">
-                            <p><b>INGREDIENTS</b><br>
-                            1 cup chocolate chips<br>
-                            8 large marshmallows graham crackers for dipping<br><br>
-                            <b>INSTRUCTIONS</b><br>
-                            1. Preheat the oven to 450. 
-                            <p>2. In a cast iron skillet, add the chocolate chips. Snip the large marshmallows in half and top the chocolate chips with them. (You could also use a scoop of mini marshmallows alternatively.)</p>
-                            <p>3. Once the oven is up to temperature, add the skillet to the oven. Bake for 7-9 minutes, or until the marshmallows turn golden brown.</p>
-                            <p>4. Serve with graham crackers for scooping.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- bucketlist Modal 7; CUPCAKES -->
-    <div class="bucketlist-modal modal fade" id="bucketlistModal7" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2><a href="http://www.bakerella.com/more-minis/comment-page-2/#comments">Polar Bear Cupcakes</a></h2>
-                            <p class="item-intro text-muted">Or these could totally become Samoyed cupcakes.</p>
-                            <img class="img-responsive img-centered" src="img/bucketlist/polarbears2.png" alt="">
-                            <p>Basically just chocolate cupcakes decorated as you wish. ALTERNATIVELY, she also made these <a href="http://www.bakerella.com/easy-little-pandas/">pandas</a> that appeal to me because chocolate chips, but polar bears >> pandas so tough call! We can also totally improvise with our better tasting ingredients I bet.</p>
-
-                            <img class="img-responsive img-centered" src="img/bucketlist/pandas2.png" alt="">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- bucketlist Modal 8; BROWNIES -->
-    <div class="bucketlist-modal modal fade" id="bucketlistModal8" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Caramel Brownies</h2>
-                            <p class="item-intro text-muted">Because I'm still on a path to recreate Kelly's from Senior year of high school.</p>
-                            <img class="img-responsive img-centered" src="img/bucketlist/brownies2.png" alt="">
-                         <b>DIRECTIONS:</b> 
-                        <p>1. Preheat the oven to whatever it says on your brownie mix box (325 degrees F for Ghirardelli). Spray a 9x9-inch metal pan with nonstick spray and then line with a 9x15-inch strip of parchment paper, letting it come up and over two sides. Spray the parchment with nonstick spray too. </p>
-                        <p>2. In a large bowl, prepare your brownie batter as directed on the box. Spread 1/2 of the brownie batter into your prepared pan. Place the chocolate-covered caramels on top in 5 rows of 5. Spoon the remaining brownie batter on top and spread to cover.</p>
-                        <p>3. Bake the brownies as directed on your brownie mix box for a 9x9-inch pan.</p>
-                        <p>4. Let the brownies cool completely and then gently lift the parchment paper and brownies out of the pan and onto a cutting board. Cut into squares and serve!</p>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Recipe</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <section id="goodies">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">(Kind Of) Presents  </h2>
-                    <h3 class="section-subheading text-muted">More stuff I like... aka QUALITY.</h3>
-                </div>
-            </div>
-            <div class="row">
-            <div class="row text-center">
-
-                <div class="col-md-4">
-                    <a href="#" data-toggle="modal" data-target="#recModal"><span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-bookmark fa-stack-1x  fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Media Recs</h4></a>
-                    <p class="text-muted">My suggestions for combatting boredom by learning and expanding your views of the world! Also known as: I want people to discuss long, depressing articles with!</p> 
-                </div>    
-                <div class="col-md-4">
-                    <a href="#" data-toggle="modal" data-target="#psdModal"><span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-file-o fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Dropbox</h4></a>
-                    <p class="text-muted">Obviously I'm still here for all your photoshop needs, but for the rare occasions when I'm not at my laptop! Plus, my latest attempt to improve your workflow.</p>
-                </div>  
-                <div class="col-md-4">
-                    <a href="#" data-toggle="modal" data-target="#fandangoModal"><span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-ticket fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading"> Fandango</a></h4>
-                    <p class="text-muted">Because I'm terribly uncreative and movies are the best gift known to man, aside from excellent tv shows with solid character development and sustained story arcs.</p>
-                </div>         
+                </section>
                 
-                </div> 
-            </div>
-            </div>
-        </div>
-    </section>
-
- 
-      <!-- Modal content-->
-      <div class="goodies-modal modal fade" id="mediaModal" tabindex="-1" role="dialog" aria-labelledby="fandangoModal" aria-hidden="true" >
-          <div class="modal-dialog modal-lg" style="500px">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Watchlist</h4>
-              </div>
-              <div class="modal-body" >
-
-            <center><iframe src="http://www.jotform.com/table/52101435854045" frameborder="0" style="width: 100%; height: 100%; min-height: 180px;  scrolling:auto"></iframe></center>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      <!-- FANDANGO !-->
-        <div class="goodies-modal modal fade" id="fandangoModal" tabindex="-1" role="dialog" aria-labelledby="fandangoModal" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">$25 Fandango Gift Card</h4>
-              </div>
-              <div class="modal-body">
-                <h3>7FH7-B2H588-GBAA</h3>
-                <p>Use online at a nice theater with comfy, reclining seats, so you don't end up having to steal seating from poor handicapped individuals :]</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-             <!-- SUGGESTIONS !-->
-        <div class="goodies-modal modal fade" id="recModal" tabindex="-1" role="dialog" aria-labelledby="recModal" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Recommendations</h4>
-              </div>
-              <div class="modal-body">
-              <br>These are some of the articles that have stuck with me the most over the last two or so years. Okay, so maybe I just want you to consume other forms of media while I catch up in movie count, what of it? Here, have <a href="http://www.fastcompany.com/3048913/how-to-be-a-success-at-everything/how-changing-your-reading-habits-can-transform-your-health">an article on how reading can transform your health</a>. I was going to/will add a books section but I refuse to recommend books until you've finished <i>His Dark Materials</i>.<br><br>
-                <h4><center>Articles</center></h4>
-                <div class="panel-group" id="accordion">
-                    
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><b>Letting Go</b> (WC: 12,000) </a>  -  <a href="http://www.newyorker.com/magazine/2010/08/02/letting-go-2"><i>New Yorker</i></a>  
-                        </h4>
-                    </div>
-                    <div id="collapseTwo" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <p><blockquote class="mediaQuote">This is a modern tragedy, replayed millions of times over. When there is no way of knowing exactly how long our skeins will run—and when we imagine ourselves to have much more time than we do—our every impulse is to fight, to die with chemo in our veins or a tube in our throats or fresh sutures in our flesh. The fact that we may be shortening or worsening the time we have left hardly seems to register. We imagine that we can wait until the doctors tell us that there is nothing more they can do. But rarely is there nothing more that doctors can do. They can give toxic drugs of unknown efficacy, operate to try to remove part of the tumor, put in a feeding tube if a person can’t eat: there’s always something. We want these choices. We don’t want anyone—certainly not bureaucrats or the marketplace—to limit them. But that doesn’t mean we are eager to make the choices ourselves. Instead, most often, we make no choice at all. We fall back on the default, and the default is: Do Something. Is there any way out of this? <a href="http://www.newyorker.com/magazine/2015/05/11/overkill-atul-gawande">x</a></blockquote></p>
-                            <p>I think about death a lot more than I should, and nowadays I invariably end up thinking about this article. The author also wrote a more recent article about <a href="http://www.newyorker.com/magazine/2015/05/11/overkill-atul-gawande">the cost of unecessary medical care</a>, and if for some reason you have a morbid interest in this topic, I've got a whole bunch of other links saved!</p>
+                <!-- Modal content-->
+                <div class="goodies-modal modal fade" id="mediaModal" tabindex="-1" role="dialog" aria-labelledby="fandangoModal" aria-hidden="true" >
+                    <div class="modal-dialog modal-lg" style="500px">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel">Watchlist</h4>
+                            </div>
+                            <div class="modal-body" >
+                                <center><iframe src="http://www.jotform.com/table/52101435854045" frameborder="0" style="width: 100%; height: 100%; min-height: 180px;  scrolling:auto"></iframe></center>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">How One Stupid Tweet Blew Up Justine Sacco’s Life (WC: 4,500) - <a href="http://www.nytimes.com/2015/02/15/magazine/how-one-stupid-tweet-ruined-justine-saccos-life.html?_r=0"><i>The NYT</i></a></a>
-                        </h4>
-                    </div>
-                    <div id="collapseSix" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <i><blockquote class="mediaQuote">Still, in those early days, the collective fury felt righteous, powerful and effective. It felt as if hierarchies were being dismantled, as if justice were being democratized. As time passed, though, I watched these shame campaigns multiply, to the point that they targeted not just powerful institutions and public figures but really anyone perceived to have done something offensive. I also began to marvel at the disconnect between the severity of the crime and the gleeful savagery of the punishment. It almost felt as if shamings were now happening for their own sake, as if they were following a script. <a href="http://www.nytimes.com/2015/02/15/magazine/how-one-stupid-tweet-ruined-justine-saccos-life.html?_r=0">x</a></i></p></blockquote>  
-                            <p>This author and his book have featured pretty prominently in mainstream media this past year, so you might have read this already, but this is why I can't get behind online witchhunts! Not that most of these people aren't a bit dim, but it's scary just how quickly social media and the the fervor of public shaming can dismantle lives.</p>
+                <!-- FANDANGO !-->
+                <div class="goodies-modal modal fade" id="fandangoModal" tabindex="-1" role="dialog" aria-labelledby="fandangoModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel">$25 Fandango Gift Card</h4>
+                            </div>
+                            <div class="modal-body">
+                                <h3>7FH7-B2H588-GBAA</h3>
+                                <p>Use online at a nice theater with comfy, reclining seats, so you don't end up having to steal seating from poor handicapped individuals :]</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">The day I left my son in the car (WC: 6,000) - <a href="http://www.salon.com/2014/06/03/the_day_i_left_my_son_in_the_car/"><i>Salon</i></a></a>
-                        </h4>
-                    </div>
-                    <div id="collapseThree" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <blockquote class="mediaQuote"><p><i>I took a deep breath. I looked at the clock. For the next four or five seconds, I did what it sometimes seems I’ve been doing every minute of every day since having children, a constant, never-ending risk-benefit analysis. I noted that it was a mild, overcast, 50-degree day. I noted how close the parking spot was to the front door, and that there were a few other cars nearby. I visualized how quickly, unencumbered by a tantrumming 4-year-old, I would be, running into the store, grabbing a pair of child headphones. And then I did something I’d never done before. I left him. I told him I’d be right back. I cracked the windows and child-locked the doors and double-clicked my keys so that the car alarm was set. And then I left him in the car for about five minutes. </i> <a href="http://www.salon.com/2014/06/03/the_day_i_left_my_son_in_the_car/">x</a></p></blockquote>
-                            <p>Yeah, I know, I know, I don't know why this topic is so fascinating to me, but this somewhat represents the flip side of the article I talked about a few week sago, <a href="https://www.washingtonpost.com/lifestyle/magazine/fatal-distraction-forgetting-a-child-in-thebackseat-of-a-car-is-a-horrifying-mistake-is-it-a-crime/2014/06/16/8ae0fe3a-f580-11e3-a3a5-42be35962a52_story.html">Fatal Distraction: Forgetting a Child in the Backseat of a Car Is a Horrifying Mistake. Is It a Crime? </a>. Which is really depressing but equally recommended.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">The Empathy Exams (WC: 9,500) - <a href="http://www.believermag.com/issues/201402/?read=article_jamison"><i>The Believer</i></a></a>
-                        </h4>
-                    </div>
-                    <div id="collapseFive" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <p> <blockquote class="mediaQuote"> I could tell you I got an abortion one February or heart surgery that March—like they were separate cases, unrelated scripts—but neither one of these accounts would be complete without the other. A single month knitted them together; two mornings I woke up on an empty stomach and slid into a paper gown. One operation depended on a tiny vacuum, the other on a catheter that would ablate the tissue of my heart. Ablate? I asked the doctors. They explained that meant “burn.”</p>
-                            <p>One procedure made me bleed and the other was nearly bloodless; one was my choice and the other wasn’t; both made me feel—at once—the incredible frailty and capacity of my own body; both came in a bleak winter; both left me prostrate under the hands of men, and dependent on the care of a man I was just beginning to love. <a href="http://www.believermag.com/issues/201402/?read=article_jamison">x</a></blockquote></p>  
-                            <p>This is just a beautifully written essay, playing off the author's experience as a paid medical actor to explore human suffering and empathy. Sounds a little self-indulgent and probably is, but it's such a compelling study in vulnerability that to me it succeeds perfectly.</p>
-                        </div>
-                    </div>
-                </div>
-                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">The Extraordinary Science of Addictive Junk Food (WC: 10,000) - <a href="http://www.nytimes.com/2013/02/24/magazine/the-extraordinary-science-of-junk-food.html"><i>The NYT</i></a></a>
-                        </h4>
-                    </div>
-                    <div id="collapseFour" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <i><blockquote class="mediaQuote">The public and the food companies have known for decades now — or at the very least since this meeting — that sugary, salty, fatty foods are not good for us in the quantities that we consume them. So why are the diabetes and obesity and hypertension numbers still spiraling out of control? It’s not just a matter of poor willpower on the part of the consumer and a give-the-people-what-they-want attitude on the part of the food manufacturers. What I found, over four years of research and reporting, was a conscious effort — taking place in labs and marketing meetings and grocery-store aisles — to get people hooked on foods that are convenient and inexpensive. <a href="http://www.nytimes.com/2013/02/24/magazine/the-extraordinary-science-of-junk-food.html">x</a></i></p></blockquote>  
-                            <p>A really fascinating (if slightly sobering) read that combines psychology, chemistry, and business to give you an insight into how fast food is engineered. I cite it all the time so I'm not sure if I've mentioned it yet, but it teaches you fun little facts to educate friends with.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                        <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><b>Hiroshima</b> (WC: 30,000) </a>  -  <a href="http://www.newyorker.com/magazine/1946/08/31/hiroshima"><i>New Yorker</i></a>  
-                        </h4>
-                    </div>
-                    <div id="collapseOne" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <p><blockquote class="mediaQuote">A hundred thousand people were killed by the atomic bomb, and these six were among the survivors. They still wonder why they lived when so many others died. Each of them counts many small items of chance or volition—a step taken in time, a decision to go indoors, catching one streetcar instead of the next—that spared him. And now each knows that in the act of survival he lived a dozen lives and saw more death than he ever thought he would see. At the time, none of them knew anything. <a href="http://www.newyorker.com/magazine/1946/08/31/hiroshima">x</a></blockquote></p>
-
-                            This is far from the most uplifting read, and it's long enough to be a short book, but there's a reason it's often considered the best work of journalism ever published. It gave us the narrative style that defines all the best non-fiction features today, and it's haunting and humbling and something they say everyone has to read once, so might as well do that now!</i>  
-                        </div>
-                    </div>
-                </div>
-                 
-  
-            <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-        </div>
-      </div>
-    </div>
-
-        <!-- PSD !-->
-        <div class="goodies-modal modal fade" id="psdModal" tabindex="-1" role="dialog" aria-labelledby="psdModal" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Dropbox</h4>
-              </div>
-              <div class="modal-body">
-                <h3><a href="https://www.dropbox.com/s/i4tzz9b7gy7e9v7/soulcycle.psd?dl=0"><img src="img/bucketlist/psd.png" style="height:100px"></a>
-                <a href="https://www.dropbox.com/sh/bgcnx1c2qc7m1rn/AAAVTO77_2K3a1vKSn9zpIXNa?dl=0"><img src="http://i.imgur.com/SBv0Y3T.png" style="height:100px"></a>
-                </h3>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-   
-
-<!-- 
-    <section class="no-padding" id="bucketlist">
-        <div class="container-fluid">
-            <div class="row no-gutter">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="bucketlist-box">
-                        <img src="img/bucketlist/1.jpg" class="img-responsive" alt="">
-                        <div class="bucketlist-box-caption">
-                            <div class="bucketlist-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
+                <!-- SUGGESTIONS !-->
+                <div class="goodies-modal modal fade" id="recModal" tabindex="-1" role="dialog" aria-labelledby="recModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel">Recommendations</h4>
+                            </div>
+                            <div class="modal-body">
+                                <br>These are some of the articles that have stuck with me the most over the last two or so years. Okay, so maybe I just want you to consume other forms of media while I catch up in movie count, what of it? Here, have <a href="http://www.fastcompany.com/3048913/how-to-be-a-success-at-everything/how-changing-your-reading-habits-can-transform-your-health">an article on how reading can transform your health</a>. I was going to/will add a books section but I refuse to recommend books until you've finished <i>His Dark Materials</i>.<br><br>
+                                <h4><center>Articles</center></h4>
+                                <div class="panel-group" id="accordion">
+                                    
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><b>The Late, Great Stephen Colbert</b> (WC: 6,000) </a>  -  <a href="http://www.gq.com/story/stephen-colbert-gq-cover-story"><i>GQ</i></a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <p><blockquote class="mediaQuote">I've easily played the recording of that conversation a dozen times, only one of them in order to transcribe. And while we spent plenty of time talking about comedy and the conventions of late-night and the sheer practical challenge of doing a show twice as long as his old one—the thing I've been thinking about the most since my time with Colbert is loss. The losses he's experienced in his life, yes, but really the meaning we all make of our losses. Deaths of loved ones, the phases of our children's lives hurtling by, jobs and relationships we never imagined would end. All of it. Among other things, our lives are compendiums of loss and change and what we make of it. I've never met anyone who's faced that reality more meaningfully than Stephen Colbert. I suppose, more than anything, that's what this story is about. <a href="http://www.gq.com/story/stephen-colbert-gq-cover-story">x</a></blockquote></p>
+                                                <p>💖💔</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">How One Stupid Tweet Blew Up Justine Sacco’s Life (WC: 4,500) - <a href="http://www.nytimes.com/2015/02/15/magazine/how-one-stupid-tweet-ruined-justine-saccos-life.html?_r=0"><i>The NYT</i></a></a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseSix" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <i><blockquote class="mediaQuote">Still, in those early days, the collective fury felt righteous, powerful and effective. It felt as if hierarchies were being dismantled, as if justice were being democratized. As time passed, though, I watched these shame campaigns multiply, to the point that they targeted not just powerful institutions and public figures but really anyone perceived to have done something offensive. I also began to marvel at the disconnect between the severity of the crime and the gleeful savagery of the punishment. It almost felt as if shamings were now happening for their own sake, as if they were following a script. <a href="http://www.nytimes.com/2015/02/15/magazine/how-one-stupid-tweet-ruined-justine-saccos-life.html?_r=0">x</a></i></p></blockquote>
+                                                <p>This author and his book have featured pretty prominently in mainstream media this past year, so you might have read this already, but this is why I can't get behind online witchhunts! Not that most of these people aren't a bit dim, but it's scary just how quickly social media and the the fervor of public shaming can dismantle lives.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">The day I left my son in the car (WC: 6,000) - <a href="http://www.salon.com/2014/06/03/the_day_i_left_my_son_in_the_car/"><i>Salon</i></a></a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseThree" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <blockquote class="mediaQuote"><p><i>I took a deep breath. I looked at the clock. For the next four or five seconds, I did what it sometimes seems I’ve been doing every minute of every day since having children, a constant, never-ending risk-benefit analysis. I noted that it was a mild, overcast, 50-degree day. I noted how close the parking spot was to the front door, and that there were a few other cars nearby. I visualized how quickly, unencumbered by a tantrumming 4-year-old, I would be, running into the store, grabbing a pair of child headphones. And then I did something I’d never done before. I left him. I told him I’d be right back. I cracked the windows and child-locked the doors and double-clicked my keys so that the car alarm was set. And then I left him in the car for about five minutes. </i> <a href="http://www.salon.com/2014/06/03/the_day_i_left_my_son_in_the_car/">x</a></p></blockquote>
+                                                <p>Yeah, I know, I know, I don't know why this topic is so fascinating to me, but this somewhat represents the flip side of the article I talked about a few week sago, <a href="https://www.washingtonpost.com/lifestyle/magazine/fatal-distraction-forgetting-a-child-in-thebackseat-of-a-car-is-a-horrifying-mistake-is-it-a-crime/2014/06/16/8ae0fe3a-f580-11e3-a3a5-42be35962a52_story.html">Fatal Distraction: Forgetting a Child in the Backseat of a Car Is a Horrifying Mistake. Is It a Crime? </a>. Which is really depressing but equally recommended.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">The Empathy Exams (WC: 9,500) - <a href="http://www.believermag.com/issues/201402/?read=article_jamison"><i>The Believer</i></a></a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseFive" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <p> <blockquote class="mediaQuote"> I could tell you I got an abortion one February or heart surgery that March—like they were separate cases, unrelated scripts—but neither one of these accounts would be complete without the other. A single month knitted them together; two mornings I woke up on an empty stomach and slid into a paper gown. One operation depended on a tiny vacuum, the other on a catheter that would ablate the tissue of my heart. Ablate? I asked the doctors. They explained that meant “burn.”</p>
+                                                <p>One procedure made me bleed and the other was nearly bloodless; one was my choice and the other wasn’t; both made me feel—at once—the incredible frailty and capacity of my own body; both came in a bleak winter; both left me prostrate under the hands of men, and dependent on the care of a man I was just beginning to love. <a href="http://www.believermag.com/issues/201402/?read=article_jamison">x</a></blockquote></p>
+                                                <p>This is just a beautifully written essay, playing off the author's experience as a paid medical actor to explore human suffering and empathy. Sounds a little self-indulgent and probably is, but it's such a compelling study in vulnerability that to me it succeeds perfectly.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">The Really Big One (WC: 6,000) - <a href="http://www.newyorker.com/magazine/2015/07/20/the-really-big-one?intcid=mod-most-popular"><i>The New Yorker</i></a></a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseFive" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <p> <blockquote class="mediaQuote"> In the Pacific Northwest, the area of impact will cover some hundred and forty thousand square miles, including Seattle, Tacoma, Portland, Eugene, Salem (the capital city of Oregon), Olympia (the capital of Washington), and some seven million people. When the next full-margin rupture happens, that region will suffer the worst natural disaster in the history of North America. Roughly three thousand people died in San Francisco’s 1906 earthquake. Almost two thousand died in Hurricane Katrina. Almost three hundred died in Hurricane Sandy. FEMA projects that nearly thirteen thousand people will die in the Cascadia earthquake and tsunami. Another twenty-seven thousand will be injured, and the agency expects that it will need to provide shelter for a million displaced people, and food and water for another two and a half million.   <a href="http://www.newyorker.com/magazine/2015/07/20/the-really-big-one?intcid=mod-most-popular">x</a></blockquote></p>
+                                                <p>So this earthquake will affect California, but the worst damage will occur further away from us so that's kind of comforting! Who am I kidding, we're screwed.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">The Extraordinary Science of Addictive Junk Food (WC: 10,000) - <a href="http://www.nytimes.com/2013/02/24/magazine/the-extraordinary-science-of-junk-food.html"><i>The NYT</i></a></a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseFour" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <i><blockquote class="mediaQuote">The public and the food companies have known for decades now — or at the very least since this meeting — that sugary, salty, fatty foods are not good for us in the quantities that we consume them. So why are the diabetes and obesity and hypertension numbers still spiraling out of control? It’s not just a matter of poor willpower on the part of the consumer and a give-the-people-what-they-want attitude on the part of the food manufacturers. What I found, over four years of research and reporting, was a conscious effort — taking place in labs and marketing meetings and grocery-store aisles — to get people hooked on foods that are convenient and inexpensive. <a href="http://www.nytimes.com/2013/02/24/magazine/the-extraordinary-science-of-junk-food.html">x</a></i></p></blockquote>
+                                                <p>A really fascinating (if slightly sobering) read that combines psychology, chemistry, and business to give you an insight into how fast food is engineered. I cite it all the time so I'm not sure if I've mentioned it yet, but it teaches you fun little facts to educate friends with.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><b>Hiroshima</b> (WC: 30,000) </a>  -  <a href="http://www.newyorker.com/magazine/1946/08/31/hiroshima"><i>New Yorker</i></a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <p><blockquote class="mediaQuote">A hundred thousand people were killed by the atomic bomb, and these six were among the survivors. They still wonder why they lived when so many others died. Each of them counts many small items of chance or volition—a step taken in time, a decision to go indoors, catching one streetcar instead of the next—that spared him. And now each knows that in the act of survival he lived a dozen lives and saw more death than he ever thought he would see. At the time, none of them knew anything. <a href="http://www.newyorker.com/magazine/1946/08/31/hiroshima">x</a></blockquote></p>
+                                                This is far from the most uplifting read, and it's long enough to be a short book, but there's a reason it's often considered the best work of journalism ever published. It gave us the narrative style that defines all the best non-fiction features today, and it's haunting and humbling and something they say everyone has to read once, so might as well do that now!</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="bucketlist-box">
-                        <img src="img/bucketlist/2.jpg" class="img-responsive" alt="">
-                        <div class="bucketlist-box-caption">
-                            <div class="bucketlist-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="bucketlist-box">
-                        <img src="img/bucketlist/3.jpg" class="img-responsive" alt="">
-                        <div class="bucketlist-box-caption">
-                            <div class="bucketlist-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="bucketlist-box">
-                        <img src="img/bucketlist/4.jpg" class="img-responsive" alt="">
-                        <div class="bucketlist-box-caption">
-                            <div class="bucketlist-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="bucketlist-box">
-                        <img src="img/bucketlist/5.jpg" class="img-responsive" alt="">
-                        <div class="bucketlist-box-caption">
-                            <div class="bucketlist-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="bucketlist-box">
-                        <img src="img/bucketlist/6.jpg" class="img-responsive" alt="">
-                        <div class="bucketlist-box-caption">
-                            <div class="bucketlist-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                    </div>
                 </div>
             </div>
-        </div>
- 
-  -->
-
-
-<nav class='menu-ui' id="searchFilters">
-  <a href='#' class='active' data-filter='all'><b>Show all</b></a>
-  <a href='#' data-filter='food'>Food</a>
-  <a href='#' data-filter='dessert'>Dessert</a>
-  <a href='#' data-filter='entertainment'>Entertainment</a>
-  <a href='#' data-filter='past'>Past</a>
-  <a href='#' data-filter='future'>Future</a>
-</nav>
-
-
-<div id='map'></div>
-<input id='search' type="text" class="form-control" placeholder="Search by city">
-<div id='navigation' class='menu-ui'>
-  <a href='#' data-position='37.445444,-122.160708'>Palo Alto</a>
-  <a href='#' data-position='37.787609,-122.405193'>San Francisco</a>
-</div>
-
+            <!-- PSD !-->
+            <div class="goodies-modal modal fade" id="psdModal" tabindex="-1" role="dialog" aria-labelledby="psdModal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Dropbox</h4>
+                        </div>
+                        <div class="modal-body">
+                            <h3><a href="https://www.dropbox.com/s/i4tzz9b7gy7e9v7/soulcycle.psd?dl=0"><img src="img/bucketlist/psd.png" style="height:100px"></a>
+                            <a href="https://www.dropbox.com/sh/bgcnx1c2qc7m1rn/AAAVTO77_2K3a1vKSn9zpIXNa?dl=0"><img src="http://i.imgur.com/SBv0Y3T.png" style="height:100px"></a>
+                            </h3>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--
+            <section class="no-padding" id="bucketlist">
+                <div class="container-fluid">
+                    <div class="row no-gutter">
+                        <div class="col-lg-4 col-sm-6">
+                            <a href="#" class="bucketlist-box">
+                                <img src="img/bucketlist/1.jpg" class="img-responsive" alt="">
+                                <div class="bucketlist-box-caption">
+                                    <div class="bucketlist-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            Category
+                                        </div>
+                                        <div class="project-name">
+                                            Project Name
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <a href="#" class="bucketlist-box">
+                                <img src="img/bucketlist/2.jpg" class="img-responsive" alt="">
+                                <div class="bucketlist-box-caption">
+                                    <div class="bucketlist-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            Category
+                                        </div>
+                                        <div class="project-name">
+                                            Project Name
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <a href="#" class="bucketlist-box">
+                                <img src="img/bucketlist/3.jpg" class="img-responsive" alt="">
+                                <div class="bucketlist-box-caption">
+                                    <div class="bucketlist-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            Category
+                                        </div>
+                                        <div class="project-name">
+                                            Project Name
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <a href="#" class="bucketlist-box">
+                                <img src="img/bucketlist/4.jpg" class="img-responsive" alt="">
+                                <div class="bucketlist-box-caption">
+                                    <div class="bucketlist-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            Category
+                                        </div>
+                                        <div class="project-name">
+                                            Project Name
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <a href="#" class="bucketlist-box">
+                                <img src="img/bucketlist/5.jpg" class="img-responsive" alt="">
+                                <div class="bucketlist-box-caption">
+                                    <div class="bucketlist-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            Category
+                                        </div>
+                                        <div class="project-name">
+                                            Project Name
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <a href="#" class="bucketlist-box">
+                                <img src="img/bucketlist/6.jpg" class="img-responsive" alt="">
+                                <div class="bucketlist-box-caption">
+                                    <div class="bucketlist-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            Category
+                                        </div>
+                                        <div class="project-name">
+                                            Project Name
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                -->
+                <nav class='menu-ui' id="searchFilters">
+                    <a href='#' class='active' data-filter='all'><b>Show all</b></a>
+                    <a href='#' data-filter='food'>Food</a>
+                    <a href='#' data-filter='dessert'>Dessert</a>
+                    <a href='#' data-filter='entertainment'>Entertainment</a>
+                    <a href='#' data-filter='past'>Past</a>
+                    <a href='#' data-filter='future'>Future</a>
+                </nav>
+                <div id='map'></div>
+                <input id='search' type="text" class="form-control" placeholder="Search by city">
+                <div id='navigation' class='menu-ui'>
+                    <a href='#' data-position='37.445444,-122.160708'>Palo Alto</a>
+                    <a href='#' data-position='37.787609,-122.405193'>San Francisco</a>
+                </div>
 
 <script>
 L.mapbox.accessToken = 'pk.eyJ1Ijoic2VjcmV0YXJpYXRzIiwiYSI6IjcyMGE4OWE3MTQzNWY2YTNmZmMzYjE5MzBlNjBkY2RjIn0.7KZd2Ox9NAZKHia2sv1DPQ';
@@ -1321,6 +1272,75 @@ var geojson = [
         "marker-color": "#f6bf01",
         "marker-size": "large",
         "marker-symbol": "ice-cream"
+      }
+    },
+      {
+    "type": "Feature",
+      "geometry": {
+        "coordinates": [
+        -122.196575,
+          37.788898
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b>Peter's Kettle Corn</b>",
+        "description": '<center><i><b><a href="http://www.yelp.com/biz/peters-kettle-corn-oakland">Yelp</a></i>  ',
+        "city":"Oakland",
+        "food": false,
+        "dessert": true,
+        "entertainment": false,
+        "past": false,
+        "future": true,
+        "marker-color": "#f6bf01",
+        "marker-size": "large",
+        "marker-symbol": "ice-cream"
+      }
+    },
+      {
+    "type": "Feature",
+      "geometry": {
+        "coordinates": [
+        -118.442200,
+         34.055425
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b>Saffron & Rose Ice Cream</b>",
+        "description": '<center><i><b><a href="http://www.yelp.com/biz/saffron-and-rose-ice-cream-los-angeles">Yelp</a></i>  ',
+        "city":"Los Angeles",
+        "food": false,
+        "dessert": true,
+        "entertainment": false,
+        "past": false,
+        "future": true,
+        "marker-color": "#f6bf01",
+        "marker-size": "large",
+        "marker-symbol": "ice-cream"
+      }
+    },
+     {
+    "type": "Feature",
+      "geometry": {
+        "coordinates": [
+         -118.346532,
+          34.167697
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "title": "<b>Porto’s Bakery & Cafe</b>",
+        "description": '<center><i><b><a href="http://www.yelp.com/biz/saffron-and-rose-ice-cream-los-angeles">Yelp</a></i>  ',
+        "city":"Burbank",
+        "food": true,
+        "dessert": false,
+        "entertainment": false,
+        "past": false,
+        "future": true,
+        "marker-color": "#f6bf01",
+        "marker-size": "large",
+        "marker-symbol":  "fast-food"
       }
     },
     {
